@@ -11,7 +11,7 @@ from typing import Dict, List, Optional, Tuple, Any, IO
 from loguru import logger
 import sys
 
-from config import config
+from config import config, LOGS_DIR
 
 
 def setup_logging():
@@ -63,7 +63,7 @@ class MisalignmentLogger:
         self.log_interval = log_interval or config.logging.score_log_interval
         
         # Scores directory
-        self.scores_dir = config.LOGS_DIR / "misalignment_scores"
+        self.scores_dir = LOGS_DIR / "misalignment_scores"
         os.makedirs(self.scores_dir, exist_ok=True)
         
         # CSV files for each person

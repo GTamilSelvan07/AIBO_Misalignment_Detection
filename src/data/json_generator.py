@@ -8,6 +8,8 @@ from datetime import datetime
 from typing import Dict, List, Optional, Tuple, Any
 from loguru import logger
 
+from config import config, DATA_DIR
+
 
 class JsonGenerator:
     """
@@ -187,11 +189,10 @@ class JsonGenerator:
             str: Full path to the saved file
         """
         import os
-        from config import config
         
         try:
             # Create output directory if it doesn't exist
-            output_dir = os.path.join(config.DATA_DIR, "json")
+            output_dir = os.path.join(DATA_DIR, "json")
             os.makedirs(output_dir, exist_ok=True)
             
             # Full output path

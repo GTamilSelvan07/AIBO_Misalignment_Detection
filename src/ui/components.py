@@ -394,13 +394,12 @@ def transcript_section(components: Dict):
                                 unsafe_allow_html=True
                             )
             
-
 def settings_section(components: Dict):
     """
     Display the settings section of the UI.
     
     Args:
-        components: Dictionary of system components
+        components: Dictionary of component instances
     """
     st.header("Settings")
     
@@ -408,6 +407,63 @@ def settings_section(components: Dict):
     camera_manager = components["camera_manager"]
     audio_recorder = components["audio_recorder"]
     combined_processor = components["combined_processor"]
+    
+    with st.expander("Device Selection", expanded=True):
+        st.subheader("Camera Selection")
+        all_cameras = ui_settings.get_all_cameras()
+        
+        # Create multiselect for cameras
+        selected_camera_ids = st.multiselect(
+            "Select Cameras",
+            options=list(all_cameras.keys()),
+            default=list(ui_settings.selected_cameras.keys()),
+            format_func=lambda x: all_cameras.get(x, f"Camera {x}")
+        )
+        
+        # Update selected cameras
+        if selected_camera_ids != list(ui_settings.selected_cameras.keys()):
+            new_cameras = {camera_id: all_cameras[camera_id] for camera_id in selected_camera_ids}
+            ui_settings.selected_cameras = new_cameras
+            
+            # Restart camera manager with new cameras
+            if st.session_state.system_running:
+                camera_manager.stop_all()
+                camera_manager = components["camera_manager"] = CameraManager(
+                    camera_ids=list(new_cameras.keys()),
+                    camera_names=list(new_cameras.values())
+                )
+                camera_manager.start_all()
+                camera_manager.start_timed_capture(interval=ui_settings.capture_interval)
+                st.success(f"Updated cameras: {', '.join(new_cameras.values())}")
+                st.experimental_rerun()
+                
+        st.subheader("Microphone Selection")
+        all_microphones = ui_settings.get_all_microphones()
+        
+        # Create multiselect for microphones
+        selected_mic_ids = st.multiselect(
+            "Select Microphones",
+            options=list(all_microphones.keys()),
+            default=list(ui_settings.selected_microphones.keys()),
+            format_func=lambda x: all_microphones.get(x, f"Microphone {x}")
+        )
+        
+        # Update selected microphones
+        if selected_mic_ids != list(ui_settings.selected_microphones.keys()):
+            new_mics = {mic_id: all_microphones[mic_id] for mic_id in selected_mic_ids}
+            ui_settings.selected_microphones = new_mics
+            
+            # Restart audio recorder with new microphones
+            if st.session_state.system_running:
+                audio_recorder.stop_all_devices()
+                audio_recorder = components["audio_recorder"] = AudioRecorder(
+                    device_indexes=list(new_mics.keys()),
+                    device_names=list(new_mics.values())
+                )
+                audio_recorder.start_all_devices()
+                audio_recorder.start_continuous_recording(interval=ui_settings.capture_interval)
+                st.success(f"Updated microphones: {', '.join(new_mics.values())}")
+                st.experimental_rerun()
     
     with st.expander("Capture Settings"):
         # Capture interval
@@ -439,6 +495,47 @@ def settings_section(components: Dict):
             for device_name in audio_recorder.devices:
                 audio_recorder.adjust_energy_threshold(device_name, energy_threshold)
             st.success(f"Audio energy threshold set to {energy_threshold}")
+    
+    with st.expander("CSV Export Settings"):
+        # Enable CSV export
+        enable_csv = st.checkbox(
+            "Enable CSV Export",
+            value=ui_settings.enable_csv_export
+        )
+        
+        if enable_csv != ui_settings.enable_csv_export:
+            ui_settings.enable_csv_export = enable_csv
+            st.success(f"CSV export {'enabled' if enable_csv else 'disabled'}")
+        
+        # CSV export interval
+        export_interval = st.slider(
+            "Export Interval (seconds)",
+            min_value=10.0,
+            max_value=300.0,
+            value=ui_settings.csv_export_interval,
+            step=10.0
+        )
+        
+        if export_interval != ui_settings.csv_export_interval:
+            ui_settings.csv_export_interval = export_interval
+            st.success(f"CSV export interval set to {export_interval} seconds")
+        
+        # CSV export directory
+        export_dir = st.text_input(
+            "Export Directory",
+            value=str(ui_settings.csv_export_dir)
+        )
+        
+        if export_dir != str(ui_settings.csv_export_dir):
+            import os
+            from pathlib import Path
+            
+            # Create directory if it doesn't exist
+            export_path = Path(export_dir)
+            os.makedirs(export_path, exist_ok=True)
+            
+            ui_settings.csv_export_dir = export_path
+            st.success(f"CSV export directory set to {export_dir}")
             
     with st.expander("Scoring Settings"):
         # Score weights
@@ -576,13 +673,13 @@ def settings_section(components: Dict):
             combined_processor.clear_history()
             st.success("All history cleared")
             
-
+            
 def status_section(components: Dict):
     """
     Display the system status section of the UI.
     
     Args:
-        components: Dictionary of system components
+        components: Dictionary of component instances
     """
     st.header("System Status")
     
@@ -590,14 +687,16 @@ def status_section(components: Dict):
     audio_recorder = components["audio_recorder"]
     llm_client = components["llm_client"]
     websocket_client = components["websocket_client"]
+    csv_exporter = components["csv_exporter"]
+    ui_settings = components["ui_settings"]
     
     # Camera status
     camera_status = camera_manager.get_working_status()
-    camera_ok = all(camera_status.values())
+    camera_ok = any(camera_status.values())  # At least one camera working
     
     # Audio status
     audio_status = audio_recorder.get_device_status()
-    audio_ok = all(status["is_recording"] for status in audio_status.values())
+    audio_ok = any(status["is_recording"] for status in audio_status.values())  # At least one mic working
     
     # LLM status
     llm_status = llm_client.get_model_status()
@@ -605,10 +704,13 @@ def status_section(components: Dict):
     
     # WebSocket status
     websocket_status = websocket_client.get_status()
-    websocket_ok = websocket_status["connected"]
+    websocket_ok = websocket_status["connected"] if ui_settings.enable_websocket else True
+    
+    # CSV Export status
+    csv_ok = ui_settings.enable_csv_export
     
     # Display status indicators
-    cols = st.columns(4)
+    cols = st.columns(5)
     
     with cols[0]:
         st.metric("Cameras", "OK" if camera_ok else "Issues")
@@ -627,8 +729,13 @@ def status_section(components: Dict):
             
     with cols[3]:
         st.metric("WebSocket", "OK" if websocket_ok else "Disconnected")
-        if not websocket_ok and components["ui_settings"].enable_websocket:
+        if not websocket_ok and ui_settings.enable_websocket:
             st.caption(f"Error: {websocket_status['error']}")
+            
+    with cols[4]:
+        st.metric("CSV Export", "Enabled" if csv_ok else "Disabled")
+        if csv_ok:
+            st.caption(f"Interval: {ui_settings.csv_export_interval}s")
             
     # Detailed status (expandable)
     with st.expander("Detailed Status"):
@@ -650,3 +757,8 @@ def status_section(components: Dict):
         st.write(f"Connected: {'Yes' if websocket_status['connected'] else 'No'}")
         st.write(f"Server: {websocket_status['server_url']}")
         st.write(f"Queue Size: {websocket_status['queue_size']}")
+        
+        st.subheader("CSV Export Status")
+        st.write(f"Enabled: {'Yes' if ui_settings.enable_csv_export else 'No'}")
+        st.write(f"Export Directory: {ui_settings.csv_export_dir}")
+        st.write(f"Export Interval: {ui_settings.csv_export_interval} seconds")

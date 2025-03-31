@@ -13,9 +13,7 @@ from src.speech import AudioRecorder, SpeechTranscriber, SpeechAnalyzer
 from src.llm import OllamaClient
 from src.scoring import CameraScoreProcessor, SpeechScoreProcessor, CombinedScoreProcessor
 from src.data import MisalignmentLogger, JsonGenerator, WebSocketClient
-from src.ui.settings import UISettings
-
-# Import components directly (don't import from src.ui to avoid circular imports)
+from src.data.csv_exporter import CSVExporter
 from src.ui.components import (
     header_section,
     camera_section,
@@ -25,6 +23,7 @@ from src.ui.components import (
     settings_section,
     status_section
 )
+from src.ui.settings import UISettings
 
 
 def initialize_system():
@@ -36,12 +35,22 @@ def initialize_system():
     """
     logger.info("Initializing system components...")
     
+    # Create UI settings first to get camera and microphone selections
+    ui_settings = UISettings()
+    
     # Create component instances
     components = {
-        "camera_manager": CameraManager(),
+        "ui_settings": ui_settings,
+        "camera_manager": CameraManager(
+            camera_ids=list(ui_settings.selected_cameras.keys()),
+            camera_names=list(ui_settings.selected_cameras.values())
+        ),
         "face_detector": FaceDetector(),
         "misalignment_detector": MisalignmentDetector(),
-        "audio_recorder": AudioRecorder(),
+        "audio_recorder": AudioRecorder(
+            device_indexes=list(ui_settings.selected_microphones.keys()),
+            device_names=list(ui_settings.selected_microphones.values())
+        ),
         "speech_transcriber": SpeechTranscriber(),
         "llm_client": OllamaClient(),
         "speech_analyzer": None,  # Will be created after LLM client
@@ -51,7 +60,10 @@ def initialize_system():
         "misalignment_logger": MisalignmentLogger(),
         "json_generator": JsonGenerator(),
         "websocket_client": WebSocketClient(),
-        "ui_settings": UISettings()
+        "csv_exporter": CSVExporter(
+            export_dir=ui_settings.csv_export_dir,
+            export_interval=ui_settings.csv_export_interval
+        )
     }
     
     # Create speech analyzer with LLM client
@@ -96,15 +108,33 @@ def run_system(components: Dict, stop_event: threading.Event):
     misalignment_logger = components["misalignment_logger"]
     json_generator = components["json_generator"]
     websocket_client = components["websocket_client"]
+    csv_exporter = components["csv_exporter"]
     ui_settings = components["ui_settings"]
     
-    # Start cameras and audio
-    camera_manager.start_all()
-    audio_recorder.start_all_devices()
+    # Start cameras and audio - ensure at least one of each is available and working
+    camera_statuses = camera_manager.start_all()
+    audio_statuses = audio_recorder.start_all_devices()
     
-    # Start continuous capturing
-    camera_manager.start_timed_capture(interval=ui_settings.capture_interval)
-    audio_recorder.start_continuous_recording(interval=ui_settings.capture_interval)
+    # Check if we have at least one working camera and microphone
+    has_working_camera = any(camera_statuses.values())
+    has_working_microphone = any(status for name, status in audio_statuses.items())
+    
+    if not has_working_camera:
+        logger.warning("No working cameras available. Visual analysis will be disabled.")
+    
+    if not has_working_microphone:
+        logger.warning("No working microphones available. Speech analysis will be disabled.")
+    
+    if not has_working_camera and not has_working_microphone:
+        logger.error("No working cameras or microphones. Cannot start the system.")
+        return
+    
+    # Start continuous capturing for available devices
+    if has_working_camera:
+        camera_manager.start_timed_capture(interval=ui_settings.capture_interval)
+    
+    if has_working_microphone:
+        audio_recorder.start_continuous_recording(interval=ui_settings.capture_interval)
     
     # Start transcription processing
     speech_transcriber.start_processing()
@@ -134,81 +164,88 @@ def run_system(components: Dict, stop_event: threading.Event):
         last_analysis_time = current_time
         
         try:
-            # Get camera frames
-            timestamp, frames = camera_manager.get_next_synchronized_frames(timeout=0.5)
-            
-            if timestamp is None or not frames:
-                continue
+            # Process camera input if available
+            camera_results = {}
+            if has_working_camera:
+                # Get camera frames
+                timestamp, frames = camera_manager.get_next_synchronized_frames(timeout=0.5)
                 
-            # Detect faces in frames
-            face_results = {}
-            for person_name, (_, frame) in frames.items():
-                if frame is not None:
-                    success, face_data = face_detector.detect_face(frame)
-                    face_results[person_name] = (success, face_data)
+                if timestamp is not None and frames:
+                    # Detect faces in frames
+                    face_results = {}
+                    for person_name, (_, frame) in frames.items():
+                        if frame is not None:
+                            success, face_data = face_detector.detect_face(frame)
+                            face_results[person_name] = (success, face_data)
+                            
+                    # Analyze faces for misalignment
+                    misalignment_results = misalignment_detector.analyze_multiple_faces(face_results)
                     
-            # Analyze faces for misalignment
-            misalignment_results = misalignment_detector.analyze_multiple_faces(face_results)
+                    # Process camera scores
+                    for person_name, (score, details) in misalignment_results.items():
+                        camera_processor.add_score(person_name, score, details, timestamp)
+                        camera_results[person_name] = (score, details)
             
-            # Process camera scores
-            for person_name, (score, details) in misalignment_results.items():
-                camera_processor.add_score(person_name, score, details, timestamp)
-                
-            # Get audio chunks
+            # Process audio input if available
             audio_results = {}
-            for person_name in frames.keys():
-                audio, energy, audio_timestamp = audio_recorder.get_audio_chunk(
-                    person_name, 
-                    duration=ui_settings.capture_interval
-                )
-                
-                if audio is not None:
-                    audio_results[person_name] = (audio, energy, audio_timestamp)
-                    
-            # Transcribe audio
             transcript_results = {}
-            for person_name, (audio, _, audio_timestamp) in audio_results.items():
-                # Queue for transcription
-                item_id = speech_transcriber.queue_audio_for_transcription(
-                    audio,
-                    metadata={"person_name": person_name, "timestamp": audio_timestamp}
-                )
-                
-                # Wait for result with timeout
-                text, confidence, metadata = speech_transcriber.get_transcription_result(
-                    item_id, 
-                    timeout=2.0  # Wait up to 2 seconds for transcription
-                )
-                
-                if text:
-                    transcript_results[person_name] = (text, confidence, audio_timestamp)
+            if has_working_microphone:
+                # Get audio chunks
+                for person_name in audio_recorder.devices.keys():
+                    audio, energy, audio_timestamp = audio_recorder.get_audio_chunk(
+                        person_name, 
+                        duration=ui_settings.capture_interval
+                    )
                     
-            # Analyze transcripts for misalignment
-            for person_name, (text, confidence, text_timestamp) in transcript_results.items():
-                # Add to conversation history and queue for analysis
-                utterance_id, analysis_id = speech_analyzer.process_new_utterance(
-                    person_name, text, text_timestamp, confidence
-                )
-                
-                # Wait for analysis result with timeout
-                score, details = speech_analyzer.get_analysis_result(
-                    analysis_id,
-                    timeout=2.0  # Wait up to 2 seconds for analysis
-                )
-                
-                if score is not None:
-                    # Process speech score
-                    speech_processor.add_score(person_name, score, details, text, text_timestamp)
+                    if audio is not None:
+                        audio_results[person_name] = (audio, energy, audio_timestamp)
+                        
+                # Transcribe audio
+                for person_name, (audio, _, audio_timestamp) in audio_results.items():
+                    # Queue for transcription
+                    item_id = speech_transcriber.queue_audio_for_transcription(
+                        audio,
+                        metadata={"person_name": person_name, "timestamp": audio_timestamp}
+                    )
                     
+                    # Wait for result with timeout
+                    text, confidence, metadata = speech_transcriber.get_transcription_result(
+                        item_id, 
+                        timeout=2.0  # Wait up to 2 seconds for transcription
+                    )
+                    
+                    if text:
+                        transcript_results[person_name] = (text, confidence, audio_timestamp)
+                        
+                # Analyze transcripts for misalignment
+                for person_name, (text, confidence, text_timestamp) in transcript_results.items():
+                    # Add to conversation history and queue for analysis
+                    utterance_id, analysis_id = speech_analyzer.process_new_utterance(
+                        person_name, text, text_timestamp, confidence
+                    )
+                    
+                    # Wait for analysis result with timeout
+                    score, details = speech_analyzer.get_analysis_result(
+                        analysis_id,
+                        timeout=2.0  # Wait up to 2 seconds for analysis
+                    )
+                    
+                    if score is not None:
+                        # Process speech score
+                        speech_processor.add_score(person_name, score, details, text, text_timestamp)
+            
+            # Get all unique person names from both camera and speech results
+            all_person_names = set(camera_results.keys()) | set(transcript_results.keys())
+            
             # Calculate combined scores
-            for person_name in set(list(face_results.keys()) + list(transcript_results.keys())):
-                # Get latest camera score
+            for person_name in all_person_names:
+                # Get latest camera score (or use zero if not available)
                 camera_score, camera_details, _ = camera_processor.get_latest_score(person_name)
                 if camera_score is None:
                     camera_score = 0
                     camera_details = {}
                     
-                # Get latest speech score
+                # Get latest speech score (or use zero if not available)
                 speech_score, speech_details, speech_text, _ = speech_processor.get_latest_score(person_name)
                 if speech_score is None:
                     speech_score = 0
@@ -230,6 +267,14 @@ def run_system(components: Dict, stop_event: threading.Event):
                     combined_score, camera_score, speech_score,
                     combined_details
                 )
+                
+                # Export to CSV if enabled
+                if ui_settings.enable_csv_export:
+                    csv_exporter.queue_prediction(
+                        person_name, current_time,
+                        combined_score, camera_score, speech_score,
+                        combined_details
+                    )
                 
                 # Generate JSON and send via WebSocket if enabled
                 if ui_settings.enable_websocket and websocket_client.is_connected:
@@ -255,6 +300,7 @@ def run_system(components: Dict, stop_event: threading.Event):
     speech_transcriber.stop_processing()
     speech_analyzer.stop_processing()
     misalignment_logger.stop_logging()
+    csv_exporter.stop_exporting()
     websocket_client.close()
     
     logger.info("System stopped")
@@ -332,6 +378,15 @@ def run_app():
                     if st.session_state.system_thread:
                         st.session_state.system_thread.join(timeout=5.0)
                     st.warning("System stopped")
+        
+        # CSV Export button
+        if st.session_state.initialized and st.button("Export Data to CSV Now"):
+            try:
+                csv_exporter = st.session_state.components["csv_exporter"]
+                csv_exporter.manual_export()
+                st.success("Data export triggered")
+            except Exception as e:
+                st.error(f"Error exporting data: {str(e)}")
         
         # Settings section
         settings_section(st.session_state.components)

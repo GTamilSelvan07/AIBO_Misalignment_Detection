@@ -4,14 +4,14 @@ Configuration settings for the misalignment detection system.
 import os
 from pathlib import Path
 from typing import Dict, List, Optional, Union
-from pydantic import BaseModel
+from pydantic import BaseModel, root_validator, Field
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
 load_dotenv()
 
 # Base paths
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 LOGS_DIR = BASE_DIR / "logs"
 MODELS_DIR = BASE_DIR / "models"
 DATA_DIR = BASE_DIR / "data"
@@ -71,7 +71,7 @@ class SpeechConfig(BaseModel):
 # LLM settings
 class LLMConfig(BaseModel):
     ollama_host: str = os.getenv("OLLAMA_HOST", "http://localhost:11434")
-    model_name: str = os.getenv("OLLAMA_MODEL", "gemma3:1b")
+    model_name: str = os.getenv("OLLAMA_MODEL", 'gemma3:1b') # Default model
     timeout: float = 10.0  # seconds
     max_tokens: int = 1024
     temperature: float = 0.1  # Lower temperature for more deterministic outputs
@@ -137,6 +137,12 @@ class AppConfig(BaseModel):
     scoring: ScoringConfig = ScoringConfig()
     ui: UIConfig = UIConfig()
     logging: LoggingConfig = LoggingConfig()
+    
+    # Add base paths as class variables to make them accessible
+    BASE_DIR: Path = Field(default=BASE_DIR)
+    LOGS_DIR: Path = Field(default=LOGS_DIR)
+    MODELS_DIR: Path = Field(default=MODELS_DIR) 
+    DATA_DIR: Path = Field(default=DATA_DIR)
 
 # Create a singleton configuration instance
 config = AppConfig()
