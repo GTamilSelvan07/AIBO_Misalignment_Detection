@@ -1,0 +1,247 @@
+"""
+Face detection and OpenFace feature extraction for the misalignment detection system.
+"""
+import os
+import time
+import threading
+import numpy as np
+import cv2
+from loguru import logger
+from typing import Dict, List, Optional, Tuple, Union
+from py_feat import Detector
+from config import config
+
+
+class FaceDetector:
+    """
+    Class for detecting faces and extracting facial features using OpenFace (via py-feat).
+    """
+    def __init__(self, detection_threshold: float = None):
+        """
+        Initialize the face detector.
+        
+        Args:
+            detection_threshold: Confidence threshold for face detection
+        """
+        self.detection_threshold = detection_threshold or config.camera.detection_threshold
+        self.detector = None
+        self.lock = threading.Lock()
+        self.is_initialized = False
+        self.initialization_thread = None
+        self.initialization_error = None
+        
+        # Start initialization in a separate thread to avoid blocking
+        self.initialization_thread = threading.Thread(target=self._initialize_detector, daemon=True)
+        self.initialization_thread.start()
+        
+    def _initialize_detector(self):
+        """
+        Initialize the Py-Feat detector with OpenFace backend.
+        This can take a few seconds, so it's done in a separate thread.
+        """
+        try:
+            logger.info("Initializing face detector with OpenFace backend...")
+            start_time = time.time()
+            
+            # Initialize the detector with OpenFace backend
+            # Note: py-feat uses a variety of backends, but we're specifically using OpenFace
+            self.detector = Detector(
+                face_model="retinaface",  # Fast face detection
+                landmark_model="mobilefacenet",  # Fast landmark detection
+                au_model="jaanet",  # Action Units model (OpenFace compatible)
+                emotion_model="resmasknet",  # Emotion detection
+                facepose_model="img2pose",  # Head pose estimation
+            )
+            
+            logger.info(f"Face detector initialization completed in {time.time() - start_time:.2f} seconds")
+            self.is_initialized = True
+            
+        except Exception as e:
+            error_msg = f"Error initializing face detector: {str(e)}"
+            logger.error(error_msg)
+            self.initialization_error = error_msg
+            
+    def wait_for_initialization(self, timeout: float = 30.0) -> bool:
+        """
+        Wait for the detector to initialize.
+        
+        Args:
+            timeout: Maximum time to wait in seconds
+            
+        Returns:
+            bool: True if initialization was successful, False otherwise
+        """
+        if self.is_initialized:
+            return True
+            
+        start_time = time.time()
+        while time.time() - start_time < timeout:
+            if self.is_initialized:
+                return True
+            if self.initialization_error:
+                return False
+            time.sleep(0.1)
+            
+        # Timeout occurred
+        logger.error(f"Face detector initialization timed out after {timeout} seconds")
+        return False
+        
+    def detect_face(self, frame: np.ndarray) -> Tuple[bool, Optional[Dict]]:
+        """
+        Detect a face in the frame and extract OpenFace features.
+        
+        Args:
+            frame: Input frame (BGR format)
+            
+        Returns:
+            tuple: (success, features) where features include face location, landmarks, AUs, etc.
+        """
+        if not self.is_initialized:
+            if not self.wait_for_initialization(timeout=10.0):
+                return False, None
+                
+        if frame is None:
+            logger.warning("Cannot detect face: frame is None")
+            return False, None
+            
+        try:
+            # Convert to RGB for py-feat
+            rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            
+            with self.lock:
+                # Detect faces and extract features
+                result = self.detector.detect_image(rgb_frame)
+                
+            # Check if a face was detected
+            if result.empty:
+                return False, None
+                
+            # Extract the face with highest confidence
+            max_confidence_idx = result['FaceRectConfidence'].idxmax()
+            face_data = result.loc[max_confidence_idx].to_dict()
+            
+            # Only proceed if confidence is above threshold
+            if face_data['FaceRectConfidence'] < self.detection_threshold:
+                return False, None
+                
+            return True, face_data
+            
+        except Exception as e:
+            logger.error(f"Error in face detection: {str(e)}")
+            return False, None
+            
+    def detect_faces_multi(self, frames: Dict[str, np.ndarray]) -> Dict[str, Tuple[bool, Optional[Dict]]]:
+        """
+        Detect faces in multiple frames.
+        
+        Args:
+            frames: Dictionary of {camera_name: frame}
+            
+        Returns:
+            dict: Dictionary of {camera_name: (success, features)}
+        """
+        results = {}
+        for name, frame in frames.items():
+            results[name] = self.detect_face(frame)
+        return results
+        
+    def draw_face_landmarks(self, frame: np.ndarray, face_data: Dict) -> np.ndarray:
+        """
+        Draw face landmarks and AU information on the frame.
+        
+        Args:
+            frame: Input frame (BGR format)
+            face_data: Face features from detect_face
+            
+        Returns:
+            np.ndarray: Frame with landmarks and AUs drawn
+        """
+        if frame is None or face_data is None:
+            return frame
+            
+        try:
+            # Create a copy of the frame
+            display_frame = frame.copy()
+            
+            # Extract face rectangle
+            x = int(face_data['FaceRectX'])
+            y = int(face_data['FaceRectY'])
+            w = int(face_data['FaceRectWidth'])
+            h = int(face_data['FaceRectHeight'])
+            
+            # Draw face rectangle
+            cv2.rectangle(display_frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+            
+            # Draw landmarks if available
+            if 'x_0' in face_data:
+                num_landmarks = 68  # Number of landmarks in OpenFace
+                for i in range(num_landmarks):
+                    x_key = f'x_{i}'
+                    y_key = f'y_{i}'
+                    if x_key in face_data and y_key in face_data:
+                        lx = int(face_data[x_key])
+                        ly = int(face_data[y_key])
+                        cv2.circle(display_frame, (lx, ly), 1, (0, 0, 255), -1)
+                        
+            # Draw Action Units (AUs) information for confusion indicators
+            au_names = {
+                4: "Brow Lowerer",
+                7: "Lid Tightener",
+                9: "Nose Wrinkler",
+                14: "Dimpler",
+                15: "Lip Corner Depressor",
+                17: "Chin Raiser",
+                23: "Lip Tightener",
+                24: "Lip Pressor"
+            }
+            
+            # List to collect active AUs
+            active_aus = []
+            
+            # Check for active AUs
+            for au_num, au_name in au_names.items():
+                au_key = f'AU{au_num}'
+                if au_key in face_data and face_data[au_key] > 0.3:  # Threshold for considering an AU active
+                    intensity = face_data[au_key]
+                    active_aus.append((au_num, au_name, intensity))
+            
+            # Draw active AUs on the frame
+            y_offset = 30
+            for au_num, au_name, intensity in active_aus:
+                text = f"AU{au_num} ({au_name}): {intensity:.2f}"
+                cv2.putText(display_frame, text, (10, y_offset), 
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 0, 0), 1)
+                y_offset += 20
+                
+            # Draw head pose if available
+            if all(k in face_data for k in ['pitch', 'yaw', 'roll']):
+                pose_text = f"Pose: P:{face_data['pitch']:.1f} Y:{face_data['yaw']:.1f} R:{face_data['roll']:.1f}"
+                cv2.putText(display_frame, pose_text, (10, y_offset), 
+                            cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 255), 1)
+                
+            return display_frame
+            
+        except Exception as e:
+            logger.error(f"Error drawing face landmarks: {str(e)}")
+            return frame
+            
+    def extract_aus(self, face_data: Dict) -> Dict[int, float]:
+        """
+        Extract Action Units (AUs) from face data.
+        
+        Args:
+            face_data: Face features from detect_face
+            
+        Returns:
+            dict: Dictionary of {AU_number: intensity}
+        """
+        if face_data is None:
+            return {}
+            
+        aus = {}
+        for i in range(1, 28):  # OpenFace can detect AUs 1-27
+            au_key = f'AU{i}'
+            if au_key in face_data:
+                aus[i] = float(face_data[au_key])
+                
+        return aus
