@@ -738,27 +738,83 @@ def status_section(components: Dict):
             st.caption(f"Interval: {ui_settings.csv_export_interval}s")
             
     # Detailed status (expandable)
-    with st.expander("Detailed Status"):
-        st.subheader("Camera Status")
-        for name, status in camera_status.items():
-            st.write(f"{name}: {'Working' if status else 'Not Working'}")
-            
-        st.subheader("Audio Status")
-        for name, status in audio_status.items():
-            st.write(f"{name}: {'Recording' if status['is_recording'] else 'Not Recording'}, " +
-                    f"Active: {'Yes' if status['active'] else 'No'}")
-            
-        st.subheader("LLM Status")
-        st.write(f"Connected: {'Yes' if llm_status['connected'] else 'No'}")
-        st.write(f"Model: {llm_status['model']}")
-        st.write(f"Available: {'Yes' if llm_status['available'] else 'No'}")
+with st.expander("Device Selection", expanded=True):
+        st.subheader("Camera Selection")
+        all_cameras = ui_settings.get_all_cameras()
         
-        st.subheader("WebSocket Status")
-        st.write(f"Connected: {'Yes' if websocket_status['connected'] else 'No'}")
-        st.write(f"Server: {websocket_status['server_url']}")
-        st.write(f"Queue Size: {websocket_status['queue_size']}")
+        # Make sure the default selected cameras are in the available options
+        valid_camera_ids = []
+        for camera_id in ui_settings.selected_cameras.keys():
+            if camera_id in all_cameras:
+                valid_camera_ids.append(camera_id)
+            else:
+                logger.warning(f"Camera {camera_id} no longer available")
+                
+        # If no valid cameras, select the first available
+        if not valid_camera_ids and all_cameras:
+            valid_camera_ids = [next(iter(all_cameras.keys()))]
         
-        st.subheader("CSV Export Status")
-        st.write(f"Enabled: {'Yes' if ui_settings.enable_csv_export else 'No'}")
-        st.write(f"Export Directory: {ui_settings.csv_export_dir}")
-        st.write(f"Export Interval: {ui_settings.csv_export_interval} seconds")
+        # Create multiselect for cameras
+        selected_camera_ids = st.multiselect(
+            "Select Cameras",
+            options=list(all_cameras.keys()),
+            default=valid_camera_ids,
+            format_func=lambda x: all_cameras.get(x, f"Camera {x}")
+        )
+        
+        # Update selected cameras
+        if selected_camera_ids != list(ui_settings.selected_cameras.keys()):
+            new_cameras = {camera_id: all_cameras[camera_id] for camera_id in selected_camera_ids}
+            ui_settings.selected_cameras = new_cameras
+            
+            # Restart camera manager with new cameras
+            if st.session_state.system_running:
+                camera_manager.stop_all()
+                camera_manager = components["camera_manager"] = CameraManager(
+                    camera_ids=list(new_cameras.keys()),
+                    camera_names=list(new_cameras.values())
+                )
+                camera_manager.start_all()
+                camera_manager.start_timed_capture(interval=ui_settings.capture_interval)
+                st.success(f"Updated cameras: {', '.join(new_cameras.values())}")
+                st.rerun()
+                
+        st.subheader("Microphone Selection")
+        all_microphones = ui_settings.get_all_microphones()
+        
+        # Make sure the default selected microphones are in the available options
+        valid_mic_ids = []
+        for mic_id in ui_settings.selected_microphones.keys():
+            if mic_id in all_microphones:
+                valid_mic_ids.append(mic_id)
+            else:
+                logger.warning(f"Microphone {mic_id} no longer available")
+                
+        # If no valid mics, select the first available
+        if not valid_mic_ids and all_microphones:
+            valid_mic_ids = [next(iter(all_microphones.keys()))]
+        
+        # Create multiselect for microphones
+        selected_mic_ids = st.multiselect(
+            "Select Microphones",
+            options=list(all_microphones.keys()),
+            default=valid_mic_ids,
+            format_func=lambda x: all_microphones.get(x, f"Microphone {x}")
+        )
+        
+        # Update selected microphones
+        if selected_mic_ids != list(ui_settings.selected_microphones.keys()):
+            new_mics = {mic_id: all_microphones[mic_id] for mic_id in selected_mic_ids}
+            ui_settings.selected_microphones = new_mics
+            
+            # Restart audio recorder with new microphones
+            if st.session_state.system_running:
+                audio_recorder.stop_all_devices()
+                audio_recorder = components["audio_recorder"] = AudioRecorder(
+                    device_indexes=list(new_mics.keys()),
+                    device_names=list(new_mics.values())
+                )
+                audio_recorder.start_all_devices()
+                audio_recorder.start_continuous_recording(interval=ui_settings.capture_interval)
+                st.success(f"Updated microphones: {', '.join(new_mics.values())}")
+                st.rerun()

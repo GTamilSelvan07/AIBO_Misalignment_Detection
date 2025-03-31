@@ -395,9 +395,11 @@ def run_app():
         status_section(st.session_state.components)
     
     # Auto-refresh the app
+# Auto-refresh the app
     if st.session_state.system_running:
         time.sleep(config.ui.update_interval)
-        st.experimental_rerun()
+        # Use the current rerun API (st.rerun() instead of the deprecated st.experimental_rerun())
+        st.rerun()
 
 
 if __name__ == "__main__":

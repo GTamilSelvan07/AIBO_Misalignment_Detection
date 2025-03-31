@@ -9,7 +9,17 @@ import numpy as np
 import cv2
 from loguru import logger
 from typing import Dict, List, Optional, Tuple, Union
-from config import config, MODELS_DIR
+import sys
+from pathlib import Path
+
+# Add the parent directory to sys.path for running this file directly
+if __name__ == "__main__":
+    current_dir = Path(__file__).resolve().parent.parent.parent
+    sys.path.append(str(current_dir))
+    from config import config, MODELS_DIR
+else:
+    # When imported as a module, use relative import
+    from config import config, MODELS_DIR
 
 # Try to import py-feat, but use fallback if not available
 PY_FEAT_AVAILABLE = False
@@ -58,17 +68,35 @@ class FaceDetector:
                 logger.info("Initializing face detector with OpenFace backend via py-feat...")
                 start_time = time.time()
                 
-                # Initialize the detector with OpenFace backend
-                self.detector = Detector(
-                    face_model="retinaface",  # Fast face detection
-                    landmark_model="mobilefacenet",  # Fast landmark detection
-                    au_model="jaanet",  # Action Units model (OpenFace compatible)
-                    emotion_model="resmasknet",  # Emotion detection
-                    facepose_model="img2pose",  # Head pose estimation
-                )
+                # Initialize the detector based on py-feat version
+                # Different versions of py-feat have different constructor signatures
+                try:
+                    # Try the current API first 
+                    self.detector = Detector(
+                        face_model="retinaface",
+                        landmark_model="mobilefacenet",
+                        au_model="jaanet",
+                        emotion_model="resmasknet",
+                        facepose_model="img2pose",
+                    )
+                except TypeError as e:
+                    # If we get an argument error, try the older API
+                    logger.warning(f"Using alternative py-feat initialization due to: {str(e)}")
+                    try:
+                        # Older py-feat versions use different arguments
+                        self.detector = Detector()
+                    except Exception as inner_e:
+                        logger.error(f"Failed to initialize py-feat with fallback method: {str(inner_e)}")
+                        self.use_py_feat = False
                 
-                logger.info(f"Face detector initialization completed in {time.time() - start_time:.2f} seconds")
-            else:
+                if self.use_py_feat and self.detector is not None:
+                    logger.info(f"Face detector initialization completed in {time.time() - start_time:.2f} seconds")
+                else:
+                    logger.warning("Falling back to OpenCV face detection")
+                    self.use_py_feat = False
+            
+            # If py-feat isn't available or failed to initialize, use OpenCV
+            if not self.use_py_feat:
                 # Fallback to OpenCV
                 logger.info("Initializing OpenCV fallback face detector...")
                 
@@ -102,6 +130,7 @@ class FaceDetector:
             error_msg = f"Error initializing face detector: {str(e)}"
             logger.error(error_msg)
             self.initialization_error = error_msg
+            
             
     def wait_for_initialization(self, timeout: float = 30.0) -> bool:
         """

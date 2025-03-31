@@ -128,27 +128,76 @@ class AudioRecorder:
                         device["audio_queue"].put((indata.copy(), energy, time.time()))
                     except (queue.Empty, queue.Full):
                         pass  # Rare race condition, just continue
-                        
+            
+            # Try to get device info to determine supported sample rate
+            device_info = None
+            try:
+                device_info = sd.query_devices(device["index"])
+            except Exception as e:
+                logger.warning(f"Could not query device info for {device_name}: {str(e)}")
+                
+            # Determine sample rate to use - use device's supported rate if available
+            sample_rate = config.speech.sample_rate
+            if device_info and 'default_samplerate' in device_info:
+                # Use the device's default sample rate to avoid errors
+                device_sample_rate = int(device_info['default_samplerate'])
+                if device_sample_rate > 0:
+                    sample_rate = device_sample_rate
+                    logger.info(f"Using device-specific sample rate for {device_name}: {sample_rate} Hz")
+                    
             # Start the stream
-            device["stream"] = sd.InputStream(
-                samplerate=self.sample_rate,
-                channels=self.channels,
-                device=device["index"],
-                callback=audio_callback,
-                blocksize=int(self.sample_rate * 0.1)  # 100ms blocks for low latency
-            )
-            
-            device["stream"].start()
-            device["is_recording"] = True
-            device["error_count"] = 0
-            logger.info(f"Started recording from {device_name}")
-            return True
-            
+            try:
+                device["stream"] = sd.InputStream(
+                    samplerate=sample_rate,
+                    channels=config.speech.channels,
+                    device=device["index"],
+                    callback=audio_callback,
+                    blocksize=int(sample_rate * 0.1)  # 100ms blocks for low latency
+                )
+                
+                device["stream"].start()
+                device["is_recording"] = True
+                device["error_count"] = 0
+                # Store the actual sample rate used
+                device["sample_rate"] = sample_rate
+                logger.info(f"Started recording from {device_name}")
+                return True
+                
+            except Exception as stream_error:
+                # If we get a sample rate error, try with a very conservative rate
+                if "sample rate" in str(stream_error).lower():
+                    logger.warning(f"Sample rate error for {device_name}, trying fallback rate")
+                    try:
+                        # Try with 8000 Hz as fallback - most devices support this
+                        fallback_rate = 8000
+                        device["stream"] = sd.InputStream(
+                            samplerate=fallback_rate,
+                            channels=config.speech.channels,
+                            device=device["index"],
+                            callback=audio_callback,
+                            blocksize=int(fallback_rate * 0.1)
+                        )
+                        
+                        device["stream"].start()
+                        device["is_recording"] = True
+                        device["error_count"] = 0
+                        # Store the actual sample rate used
+                        device["sample_rate"] = fallback_rate
+                        logger.info(f"Started recording from {device_name} with fallback rate {fallback_rate} Hz")
+                        return True
+                    except Exception as fallback_error:
+                        logger.error(f"Error starting device {device_name} with fallback rate: {str(fallback_error)}")
+                        device["error_count"] += 1
+                        return False
+                else:
+                    raise
+                    
         except Exception as e:
             logger.error(f"Error starting device {device_name}: {str(e)}")
             device["error_count"] += 1
             return False
-            
+        
+        
     def stop_device(self, device_name: str):
         """
         Stop recording from a specific device.

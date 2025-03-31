@@ -71,7 +71,7 @@ class SpeechTranscriber:
             logger.error(f"Error initializing speech transcriber: {str(e)}")
             self.is_initialized = False
             
-    def _initialize_whisper(self):
+def _initialize_whisper(self):
         """
         Initialize the Whisper model.
         """
@@ -79,13 +79,48 @@ class SpeechTranscriber:
         start_time = time.time()
         
         try:
+            # Check if we're using a model that's too large for available memory
+            # If we've seen memory errors, switch to a smaller model
+            if self.whisper_model_name in ["base", "small", "medium", "large"]:
+                # Try to use a smaller model to avoid memory issues
+                fallback_models = ["tiny", "base", "small"]
+                current_model_idx = fallback_models.index(self.whisper_model_name) if self.whisper_model_name in fallback_models else len(fallback_models) - 1
+                model_to_use = self.whisper_model_name
+                
+                # If we've seen memory errors before, use a smaller model
+                if hasattr(self, "memory_errors") and self.memory_errors > 0:
+                    if current_model_idx > 0:
+                        model_to_use = fallback_models[current_model_idx - 1]
+                        logger.warning(f"Switching to smaller Whisper model '{model_to_use}' due to memory constraints")
+            else:
+                # Default to tiny model if unrecognized
+                model_to_use = "tiny"
+                
             # Load the Whisper model
-            self.whisper_model = whisper.load_model(self.whisper_model_name)
+            self.whisper_model = whisper.load_model(model_to_use)
+            self.memory_errors = 0  # Reset counter on successful load
             logger.info(f"Whisper model initialized in {time.time() - start_time:.2f} seconds")
+            
         except Exception as e:
             logger.error(f"Error loading Whisper model: {str(e)}")
-            self.use_whisper = False
-            self._initialize_speech_recognition()
+            if "not enough memory" in str(e):
+                # If we're out of memory, try to use an even smaller model next time
+                if not hasattr(self, "memory_errors"):
+                    self.memory_errors = 0
+                self.memory_errors += 1
+                
+                # Fall back to tiny model
+                try:
+                    logger.warning("Attempting to load 'tiny' Whisper model due to memory constraints")
+                    self.whisper_model = whisper.load_model("tiny")
+                    logger.info(f"Whisper 'tiny' model initialized in {time.time() - start_time:.2f} seconds")
+                except Exception as inner_e:
+                    logger.error(f"Error loading 'tiny' Whisper model: {str(inner_e)}")
+                    self.use_whisper = False
+                    self._initialize_speech_recognition()
+            else:
+                self.use_whisper = False
+                self._initialize_speech_recognition()
             
     def _initialize_speech_recognition(self):
         """
