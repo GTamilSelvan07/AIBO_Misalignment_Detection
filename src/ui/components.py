@@ -9,6 +9,8 @@ from typing import Dict, List, Optional, Tuple, Any
 from loguru import logger
 
 from config import config
+
+# Import visualizations directly to avoid circular imports
 from src.ui.visualizations import (
     plot_scores_history,
     plot_scores_gauge,

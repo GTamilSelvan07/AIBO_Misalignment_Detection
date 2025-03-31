@@ -13,6 +13,9 @@ from src.speech import AudioRecorder, SpeechTranscriber, SpeechAnalyzer
 from src.llm import OllamaClient
 from src.scoring import CameraScoreProcessor, SpeechScoreProcessor, CombinedScoreProcessor
 from src.data import MisalignmentLogger, JsonGenerator, WebSocketClient
+from src.ui.settings import UISettings
+
+# Import components directly (don't import from src.ui to avoid circular imports)
 from src.ui.components import (
     header_section,
     camera_section,
@@ -22,7 +25,6 @@ from src.ui.components import (
     settings_section,
     status_section
 )
-from src.ui.settings import UISettings
 
 
 def initialize_system():

@@ -1,0 +1,15 @@
+2025-03-31 14:58:17.704 | INFO     | src.data.logger:setup_logging:49 - Logging initialized
+2025-03-31 15:03:12.777 | INFO     | src.data.logger:setup_logging:49 - Logging initialized
+2025-03-31 15:03:53.921 | INFO     | src.data.logger:setup_logging:49 - Logging initialized
+2025-03-31 15:05:06.368 | INFO     | src.data.logger:setup_logging:49 - Logging initialized
+2025-03-31 15:05:56.584 | INFO     | src.data.logger:setup_logging:49 - Logging initialized
+2025-03-31 15:06:34.378 | INFO     | src.data.logger:setup_logging:49 - Logging initialized
+2025-03-31 15:06:56.974 | INFO     | src.data.logger:setup_logging:49 - Logging initialized
+2025-03-31 15:07:09.039 | INFO     | src.data.logger:setup_logging:49 - Logging initialized
+2025-03-31 15:07:57.305 | INFO     | src.data.logger:setup_logging:49 - Logging initialized
+2025-03-31 15:08:44.712 | INFO     | src.data.logger:setup_logging:49 - Logging initialized
+2025-03-31 15:09:25.423 | INFO     | src.data.logger:setup_logging:49 - Logging initialized
+2025-03-31 15:09:58.620 | INFO     | src.data.logger:setup_logging:49 - Logging initialized
+2025-03-31 15:22:28.933 | INFO     | src.data.logger:setup_logging:49 - Logging initialized
+2025-03-31 15:22:36.075 | WARNING  | src.camera.face_detector:<module>:19 - py_feat package not found. Using fallback face detection with OpenCV only.
+2025-03-31 15:22:36.075 | WARNING  | src.camera.face_detector:<module>:20 - To install py_feat, run: pip install py-feat
