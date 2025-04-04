@@ -1,0 +1,103 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 4.76,
+            "end": 9.24,
+            "text": " I can finally understand this stuff, so don't worry about this.",
+            "tokens": [
+                50364,
+                286,
+                393,
+                2721,
+                1223,
+                341,
+                1507,
+                11,
+                370,
+                500,
+                380,
+                3292,
+                466,
+                341,
+                13,
+                50614
+            ],
+            "avg_logprob": -0.3193933823529412,
+            "compression_ratio": 0.9264705882352942,
+            "no_speech_prob": 0.052978515625,
+            "words": [
+                {
+                    "start": 4.76,
+                    "end": 5.8,
+                    "word": " I",
+                    "probability": 0.4853515625
+                },
+                {
+                    "start": 5.8,
+                    "end": 6.36,
+                    "word": " can",
+                    "probability": 0.84912109375
+                },
+                {
+                    "start": 6.36,
+                    "end": 6.82,
+                    "word": " finally",
+                    "probability": 0.990234375
+                },
+                {
+                    "start": 6.82,
+                    "end": 7.3,
+                    "word": " understand",
+                    "probability": 0.99365234375
+                },
+                {
+                    "start": 7.3,
+                    "end": 7.72,
+                    "word": " this",
+                    "probability": 0.92041015625
+                },
+                {
+                    "start": 7.72,
+                    "end": 8.0,
+                    "word": " stuff,",
+                    "probability": 0.962890625
+                },
+                {
+                    "start": 8.02,
+                    "end": 8.2,
+                    "word": " so",
+                    "probability": 0.9345703125
+                },
+                {
+                    "start": 8.2,
+                    "end": 8.44,
+                    "word": " don't",
+                    "probability": 0.977783203125
+                },
+                {
+                    "start": 8.44,
+                    "end": 8.6,
+                    "word": " worry",
+                    "probability": 0.99560546875
+                },
+                {
+                    "start": 8.6,
+                    "end": 8.82,
+                    "word": " about",
+                    "probability": 0.99365234375
+                },
+                {
+                    "start": 8.82,
+                    "end": 9.24,
+                    "word": " this.",
+                    "probability": 0.94091796875
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " I can finally understand this stuff, so don't worry about this."
+}

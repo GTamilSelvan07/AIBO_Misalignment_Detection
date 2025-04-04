@@ -1,0 +1,197 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 0.0,
+            "end": 2.9,
+            "text": " Can we just...tch...things?",
+            "tokens": [
+                50364,
+                1664,
+                321,
+                445,
+                485,
+                83,
+                339,
+                485,
+                825,
+                82,
+                30,
+                50514
+            ],
+            "avg_logprob": -0.40444712608288497,
+            "compression_ratio": 1.0957446808510638,
+            "no_speech_prob": 0.044952392578125,
+            "words": [
+                {
+                    "start": 0.0,
+                    "end": 0.66,
+                    "word": " Can",
+                    "probability": 0.6416015625
+                },
+                {
+                    "start": 0.66,
+                    "end": 0.82,
+                    "word": " we",
+                    "probability": 0.82666015625
+                },
+                {
+                    "start": 0.82,
+                    "end": 2.9,
+                    "word": " just...tch...things?",
+                    "probability": 0.5482526506696429
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 4.6,
+            "end": 6.78,
+            "text": " Hi, I'm not sure. This is frustrating.",
+            "tokens": [
+                50614,
+                2421,
+                11,
+                286,
+                478,
+                406,
+                988,
+                13,
+                639,
+                307,
+                16522,
+                13,
+                50714
+            ],
+            "avg_logprob": -0.40444712608288497,
+            "compression_ratio": 1.0957446808510638,
+            "no_speech_prob": 0.044952392578125,
+            "words": [
+                {
+                    "start": 4.6,
+                    "end": 5.08,
+                    "word": " Hi,",
+                    "probability": 0.8505859375
+                },
+                {
+                    "start": 5.36,
+                    "end": 5.52,
+                    "word": " I'm",
+                    "probability": 0.890869140625
+                },
+                {
+                    "start": 5.52,
+                    "end": 5.68,
+                    "word": " not",
+                    "probability": 0.990234375
+                },
+                {
+                    "start": 5.68,
+                    "end": 5.92,
+                    "word": " sure.",
+                    "probability": 0.99755859375
+                },
+                {
+                    "start": 6.08,
+                    "end": 6.2,
+                    "word": " This",
+                    "probability": 0.986328125
+                },
+                {
+                    "start": 6.2,
+                    "end": 6.34,
+                    "word": " is",
+                    "probability": 0.998046875
+                },
+                {
+                    "start": 6.34,
+                    "end": 6.78,
+                    "word": " frustrating.",
+                    "probability": 0.99462890625
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 7.42,
+            "end": 9.44,
+            "text": " How can I do the system-vary things?",
+            "tokens": [
+                50714,
+                1012,
+                393,
+                286,
+                360,
+                264,
+                1185,
+                12,
+                85,
+                822,
+                721,
+                30,
+                50864
+            ],
+            "avg_logprob": -0.40444712608288497,
+            "compression_ratio": 1.0957446808510638,
+            "no_speech_prob": 0.044952392578125,
+            "words": [
+                {
+                    "start": 7.42,
+                    "end": 7.62,
+                    "word": " How",
+                    "probability": 0.9921875
+                },
+                {
+                    "start": 7.62,
+                    "end": 7.82,
+                    "word": " can",
+                    "probability": 0.99462890625
+                },
+                {
+                    "start": 7.82,
+                    "end": 7.94,
+                    "word": " I",
+                    "probability": 0.9736328125
+                },
+                {
+                    "start": 7.94,
+                    "end": 8.12,
+                    "word": " do",
+                    "probability": 0.99560546875
+                },
+                {
+                    "start": 8.12,
+                    "end": 8.32,
+                    "word": " the",
+                    "probability": 0.465576171875
+                },
+                {
+                    "start": 8.32,
+                    "end": 8.7,
+                    "word": " system",
+                    "probability": 0.9326171875
+                },
+                {
+                    "start": 8.7,
+                    "end": 9.06,
+                    "word": "-vary",
+                    "probability": 0.635986328125
+                },
+                {
+                    "start": 9.06,
+                    "end": 9.44,
+                    "word": " things?",
+                    "probability": 0.3603515625
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Can we just...tch...things? Hi, I'm not sure. This is frustrating. How can I do the system-vary things?"
+}

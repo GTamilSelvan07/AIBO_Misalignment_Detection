@@ -1,0 +1,109 @@
+2025-04-01 21:03:21,567 - ui.main_app - INFO - Misalignment Detection Application started
+2025-04-01 21:03:21,568 - ui.main_app - INFO - Created new session: session_20250401_210321_1fc2d604
+2025-04-01 21:03:33,208 - numexpr.utils - INFO - Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-04-01 21:03:33,209 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-04-01 21:03:33,667 - ui.main_app - INFO - Initializing system components...
+2025-04-01 21:03:33,667 - core.camera_manager - INFO - Initialized Camera Manager
+2025-04-01 21:03:33,668 - core.camera_manager - INFO - Initialized camera for participant1 with device ID 0
+2025-04-01 21:03:33,668 - core.camera_manager - INFO - Added participant participant1 with camera 0
+2025-04-01 21:03:33,669 - core.camera_manager - INFO - Initialized camera for participant2 with device ID 1
+2025-04-01 21:03:33,669 - core.camera_manager - INFO - Added participant participant2 with camera 1
+2025-04-01 21:03:33,669 - core.audio_manager - INFO - Initialized Audio Manager
+2025-04-01 21:03:33,670 - core.llm_analyzer - INFO - Initialized LLM Analyzer with Gemma 3.1b
+2025-04-01 21:03:33,670 - core.detector - INFO - Initialized Misalignment Detector
+2025-04-01 21:03:33,670 - core.data_logger - INFO - Initialized DataLogger
+2025-04-01 21:03:33,672 - api.export_service - INFO - Initialized Export Service
+2025-04-01 21:03:33,672 - api.websocket_server - INFO - Initialized WebSocket Server on localhost:8765
+2025-04-01 21:03:33,672 - ui.main_app - INFO - Starting system components...
+2025-04-01 21:03:52,102 - core.camera_manager - INFO - Started camera for participant1: 640x480 at 10.0 FPS
+2025-04-01 21:03:52,390 - core.camera_manager - INFO - Started camera for participant2: 640x480 at 10.0 FPS
+2025-04-01 21:03:52,499 - core.audio_manager - INFO - Started audio recording and transcription
+2025-04-01 21:03:52,499 - core.llm_analyzer - INFO - Started LLM Analyzer
+2025-04-01 21:03:52,499 - core.detector - INFO - Started Misalignment Detector
+2025-04-01 21:03:52,499 - core.data_logger - INFO - Started DataLogger
+2025-04-01 21:03:52,500 - api.websocket_server - INFO - Started WebSocket Server on localhost:8765
+2025-04-01 21:03:52,501 - ui.main_app - INFO - Detection started successfully
+2025-04-01 21:03:52,520 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-01 21:03:52,521 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-01 21:04:02,510 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210402_0.wav
+2025-04-01 21:04:12,520 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210412_1.wav
+2025-04-01 21:04:22,521 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210422_2.wav
+2025-04-01 21:04:32,531 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210432_3.wav
+2025-04-01 21:04:42,531 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210442_4.wav
+2025-04-01 21:04:52,541 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210452_5.wav
+2025-04-01 21:05:02,541 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210502_6.wav
+2025-04-01 21:05:07,083 - core.audio_manager - ERROR - Whisper error: 
+2025-04-01 21:05:12,551 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210512_7.wav
+2025-04-01 21:05:22,552 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210522_8.wav
+2025-04-01 21:05:29,650 - core.audio_manager - ERROR - Whisper error: 
+2025-04-01 21:05:32,562 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210532_9.wav
+2025-04-01 21:05:42,562 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210542_10.wav
+2025-04-01 21:05:52,591 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210552_11.wav
+2025-04-01 21:06:02,573 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210602_12.wav
+2025-04-01 21:06:12,583 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210612_13.wav
+2025-04-01 21:06:22,590 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210622_14.wav
+2025-04-01 21:06:32,594 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210632_15.wav
+2025-04-01 21:06:42,604 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210642_16.wav
+2025-04-01 21:06:52,604 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210652_17.wav
+2025-04-01 21:07:02,614 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210702_18.wav
+2025-04-01 21:07:12,615 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210712_19.wav
+2025-04-01 21:07:22,625 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210722_20.wav
+2025-04-01 21:07:26,218 - core.audio_manager - ERROR - Whisper error: 
+2025-04-01 21:07:32,625 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\audio\segment_20250401_210732_21.wav
+2025-04-01 21:07:41,104 - api.websocket_server - ERROR - Exception: object bool can't be used in 'await' expression | Additional Info: Error starting WebSocket server
+2025-04-01 21:07:41,105 - api.websocket_server - ERROR - Traceback (most recent call last):
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\api\websocket_server.py", line 219, in _start_server
+    await self.stop_event.wait()
+TypeError: object bool can't be used in 'await' expression
+
+2025-04-01 21:07:41,105 - api.websocket_server - ERROR - Exception: [WebSocketServer] Exception: object bool can't be used in 'await' expression | Additional Info: Error starting WebSocket server (Code: None) | Additional Info: Error in WebSocket server thread
+2025-04-01 21:07:41,106 - api.websocket_server - ERROR - Traceback (most recent call last):
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\api\websocket_server.py", line 219, in _start_server
+    await self.stop_event.wait()
+TypeError: object bool can't be used in 'await' expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\api\websocket_server.py", line 235, in _run_server
+    loop.run_until_complete(self._start_server())
+  File "C:\Users\tg469\.conda\envs\misalign\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\api\websocket_server.py", line 227, in _start_server
+    raise WebSocketError(error_msg)
+utils.error_handler.WebSocketError: [WebSocketServer] Exception: object bool can't be used in 'await' expression | Additional Info: Error starting WebSocket server (Code: None)
+
+2025-04-01 21:07:41,107 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<IocpProactor.accept.<locals>.accept_coro() running at C:\Users\tg469\.conda\envs\misalign\lib\asyncio\windows_events.py:580> wait_for=<_OverlappedFuture cancelled>>
+2025-04-01 21:07:41,107 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-4' coro=<IocpProactor.accept.<locals>.accept_coro() running at C:\Users\tg469\.conda\envs\misalign\lib\asyncio\windows_events.py:580> wait_for=<_OverlappedFuture cancelled>>
+2025-04-01 21:07:41,107 - api.websocket_server - INFO - Stopped WebSocket Server
+2025-04-01 21:07:41,131 - core.data_logger - INFO - Exported session data to C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\logs\session_export.json
+2025-04-01 21:07:41,132 - core.data_logger - INFO - Stopped DataLogger
+2025-04-01 21:07:41,145 - core.detector - INFO - Stopped Misalignment Detector
+2025-04-01 21:07:41,145 - core.llm_analyzer - INFO - Stopped LLM Analyzer
+2025-04-01 21:07:41,177 - core.audio_manager - ERROR - Exception: sample width not specified | Additional Info: Error saving audio segment
+2025-04-01 21:07:41,177 - core.audio_manager - ERROR - Traceback (most recent call last):
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\core\audio_manager.py", line 190, in _save_current_segment
+    wf.setsampwidth(self.py_audio.get_sample_size(self.format))
+AttributeError: 'NoneType' object has no attribute 'get_sample_size'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\core\audio_manager.py", line 188, in _save_current_segment
+    with wave.open(segment_file, 'wb') as wf:
+  File "C:\Users\tg469\.conda\envs\misalign\lib\wave.py", line 332, in __exit__
+    self.close()
+  File "C:\Users\tg469\.conda\envs\misalign\lib\wave.py", line 444, in close
+    self._ensure_header_written(0)
+  File "C:\Users\tg469\.conda\envs\misalign\lib\wave.py", line 464, in _ensure_header_written
+    raise Error('sample width not specified')
+wave.Error: sample width not specified
+
+2025-04-01 21:07:41,178 - core.audio_manager - INFO - Stopped audio recording and transcription
+2025-04-01 21:07:43,806 - core.camera_manager - INFO - Stopped camera for participant1
+2025-04-01 21:07:45,894 - core.camera_manager - INFO - Stopped camera for participant2
+2025-04-01 21:07:45,894 - core.camera_manager - INFO - Stopped all cameras
+2025-04-01 21:07:45,894 - ui.main_app - INFO - Detection stopped successfully
+2025-04-01 21:08:06,405 - ui.main_app - INFO - Application shutdown complete

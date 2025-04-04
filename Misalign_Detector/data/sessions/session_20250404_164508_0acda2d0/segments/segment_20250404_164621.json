@@ -1,0 +1,44 @@
+{
+  "timestamp": 1743738381.829314,
+  "formatted_time": "2025-04-04 16:46:21",
+  "transcript": "Hello. Hi. This is very time consuming. I don't know what to do.",
+  "facial_features": {
+    "participant1": {
+      "confusion": 0.0,
+      "interest": 0.0,
+      "frustration": 0.0,
+      "understanding": 0.0,
+      "timestamp": "input"
+    },
+    "participant2": {
+      "confusion": 0.0,
+      "interest": 0.0,
+      "frustration": 0.0,
+      "understanding": 0.0,
+      "timestamp": "input"
+    }
+  },
+  "detection": {
+    "timestamp": 1743738381.829314,
+    "formatted_time": "2025-04-04 16:46:21.829",
+    "facial_scores": {
+      "participant1": 0.0,
+      "participant2": 0.0
+    },
+    "llm_scores": {
+      "participant1": 0.7,
+      "participant2": 0.3
+    },
+    "combined_scores": {
+      "participant2": 0.18,
+      "participant1": 0.42
+    },
+    "misalignment_detected": false,
+    "transcript": "Hello. Hi. This is very time consuming. I don't know what to do. I kind of regulated things, so I'm not sure, should I just do this or that.",
+    "llm_analysis": {
+      "misalignment_detected": true,
+      "cause": "The participant expressing 'This is very time consuming' suggests a lack of understanding of the request to help. They are acknowledging a problem but not grasping the specific action being taken. The initial statement implies a need for assistance, but the lack of detail suggests a potential misunderstanding of what's being asked.",
+      "recommendation": "Ask for clarification. Instead of simply stating 'I don't know what to do,' the participant should ask a specific question like, 'Could you tell me what you need help with?' or 'What's the goal of this task?'"
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 3.23,
+            "end": 5.09,
+            "text": " I need to... I need to get good at everything.",
+            "tokens": [
+                50364,
+                286,
+                643,
+                281,
+                485,
+                286,
+                643,
+                281,
+                483,
+                665,
+                412,
+                1203,
+                13,
+                50564
+            ],
+            "avg_logprob": -0.6737351417541504,
+            "compression_ratio": 0.9818181818181818,
+            "no_speech_prob": 0.564453125,
+            "words": [
+                {
+                    "start": 3.23,
+                    "end": 3.45,
+                    "word": " I",
+                    "probability": 0.46630859375
+                },
+                {
+                    "start": 3.45,
+                    "end": 3.45,
+                    "word": " need",
+                    "probability": 0.9482421875
+                },
+                {
+                    "start": 3.45,
+                    "end": 3.59,
+                    "word": " to...",
+                    "probability": 0.4970245361328125
+                },
+                {
+                    "start": 3.59,
+                    "end": 4.09,
+                    "word": " I",
+                    "probability": 0.79296875
+                },
+                {
+                    "start": 4.09,
+                    "end": 4.23,
+                    "word": " need",
+                    "probability": 0.99560546875
+                },
+                {
+                    "start": 4.23,
+                    "end": 4.37,
+                    "word": " to",
+                    "probability": 0.99609375
+                },
+                {
+                    "start": 4.37,
+                    "end": 4.49,
+                    "word": " get",
+                    "probability": 0.982421875
+                },
+                {
+                    "start": 4.49,
+                    "end": 4.71,
+                    "word": " good",
+                    "probability": 0.57470703125
+                },
+                {
+                    "start": 4.71,
+                    "end": 4.87,
+                    "word": " at",
+                    "probability": 0.64599609375
+                },
+                {
+                    "start": 4.87,
+                    "end": 5.09,
+                    "word": " everything.",
+                    "probability": 0.2685546875
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 6.95,
+            "end": 7.59,
+            "text": " Mm-hmm.",
+            "tokens": [
+                50564,
+                8266,
+                12,
+                10250,
+                13,
+                50664
+            ],
+            "avg_logprob": -0.6737351417541504,
+            "compression_ratio": 0.9818181818181818,
+            "no_speech_prob": 0.564453125,
+            "words": [
+                {
+                    "start": 6.95,
+                    "end": 7.39,
+                    "word": " Mm",
+                    "probability": 0.0858154296875
+                },
+                {
+                    "start": 7.39,
+                    "end": 7.59,
+                    "word": "-hmm.",
+                    "probability": 0.68896484375
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " I need to... I need to get good at everything. Mm-hmm."
+}

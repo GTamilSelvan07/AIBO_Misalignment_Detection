@@ -1,0 +1,11 @@
+{
+  "misalignment_detected": true,
+  "misalignment_scores": {
+    "participant1": 0.7,
+    "participant2": 0.3
+  },
+  "cause": "The participant expresses frustration with a system, indicating a lack of understanding of its functionality. The statement 'I'm pretty... Cool about this' suggests a reluctance to engage with the problem, potentially indicating a deeper level of confusion than simply needing guidance.",
+  "recommendation": "Start by acknowledging the user's frustration. Offer a simple, clear explanation of the system's purpose and how it works. Ask guiding questions to help them understand the context and identify the specific issue they're facing. Perhaps offer a quick, easy-to-understand example.",
+  "timestamp": 1743494666.0340207,
+  "transcript": "Hi. I don't know what to do with this system. I'm pretty... Cool about this. Can we do something that is very good at this? This is frustrating. What to do?"
+}

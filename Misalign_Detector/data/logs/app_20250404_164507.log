@@ -1,0 +1,103 @@
+2025-04-04 16:45:08,324 - ui.main_app - INFO - Misalignment Detection Application started
+2025-04-04 16:45:08,325 - ui.main_app - INFO - Created new session: session_20250404_164508_0acda2d0
+2025-04-04 16:45:25,049 - numexpr.utils - INFO - Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-04-04 16:45:25,049 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-04-04 16:45:26,077 - ui.main_app - INFO - Initializing system components...
+2025-04-04 16:45:26,077 - core.camera_manager - INFO - Initialized Camera Manager
+2025-04-04 16:45:26,079 - core.camera_manager - INFO - Initialized camera for participant1 with device ID 0
+2025-04-04 16:45:26,079 - core.camera_manager - INFO - Added participant participant1 with camera 0
+2025-04-04 16:45:26,080 - core.camera_manager - INFO - Initialized camera for participant2 with device ID 1
+2025-04-04 16:45:26,080 - core.camera_manager - INFO - Added participant participant2 with camera 1
+2025-04-04 16:45:26,080 - core.audio_manager - INFO - Initialized Audio Manager
+2025-04-04 16:45:26,080 - core.llm_analyzer - INFO - Initialized LLM Analyzer with Gemma 3.1b
+2025-04-04 16:45:26,081 - core.detector - INFO - Initialized Misalignment Detector
+2025-04-04 16:45:26,081 - core.data_logger - INFO - Initialized DataLogger
+2025-04-04 16:45:26,088 - api.export_service - INFO - Initialized Export Service
+2025-04-04 16:45:26,088 - api.websocket_server - INFO - Initialized WebSocket Server on localhost:8765
+2025-04-04 16:45:26,089 - ui.main_app - INFO - Starting system components...
+2025-04-04 16:45:46,272 - core.camera_manager - INFO - Started camera for participant1: 640x480 at 10.0 FPS
+2025-04-04 16:45:46,701 - core.camera_manager - INFO - Started camera for participant2: 640x480 at 10.0 FPS
+2025-04-04 16:45:46,822 - core.audio_manager - INFO - Started audio recording and transcription
+2025-04-04 16:45:46,823 - core.llm_analyzer - INFO - Started LLM Analyzer
+2025-04-04 16:45:46,823 - core.detector - INFO - Started Misalignment Detector
+2025-04-04 16:45:46,824 - core.data_logger - INFO - Started DataLogger
+2025-04-04 16:45:46,824 - api.websocket_server - INFO - Started WebSocket Server on localhost:8765
+2025-04-04 16:45:46,825 - ui.main_app - INFO - Detection started successfully
+2025-04-04 16:45:46,856 - websockets.server - INFO - server listening on 127.0.0.1:8765
+2025-04-04 16:45:46,857 - websockets.server - INFO - server listening on [::1]:8765
+2025-04-04 16:45:56,854 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250404_164508_0acda2d0\audio\segment_20250404_164556_0.wav
+2025-04-04 16:46:06,866 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250404_164508_0acda2d0\audio\segment_20250404_164606_1.wav
+2025-04-04 16:46:14,321 - ui.main_app - INFO - Forcing immediate analysis of current segment
+2025-04-04 16:46:16,865 - core.audio_manager - INFO - Saved audio segment: C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250404_164508_0acda2d0\audio\segment_20250404_164616_2.wav
+2025-04-04 16:46:21,829 - api.websocket_server - WARNING - WebSocket server not running or no clients connected
+2025-04-04 16:46:21,830 - ui.main_app - INFO - Sent segment segment_20250404_164621 data via WebSocket
+2025-04-04 16:46:21,830 - ui.main_app - INFO - Segment segment_20250404_164621 processed and saved to C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250404_164508_0acda2d0\segments\segment_20250404_164621.json
+2025-04-04 16:46:21,843 - api.websocket_server - ERROR - Exception: object bool can't be used in 'await' expression | Additional Info: Error starting WebSocket server
+2025-04-04 16:46:21,844 - api.websocket_server - ERROR - Traceback (most recent call last):
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\api\websocket_server.py", line 219, in _start_server
+    await self.stop_event.wait()
+TypeError: object bool can't be used in 'await' expression
+
+2025-04-04 16:46:21,844 - api.websocket_server - ERROR - Exception: [WebSocketServer] Exception: object bool can't be used in 'await' expression | Additional Info: Error starting WebSocket server (Code: None) | Additional Info: Error in WebSocket server thread
+2025-04-04 16:46:21,856 - api.websocket_server - ERROR - Traceback (most recent call last):
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\api\websocket_server.py", line 219, in _start_server
+    await self.stop_event.wait()
+TypeError: object bool can't be used in 'await' expression
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\api\websocket_server.py", line 235, in _run_server
+    loop.run_until_complete(self._start_server())
+  File "C:\Users\tg469\.conda\envs\misalign\lib\asyncio\base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\api\websocket_server.py", line 227, in _start_server
+    raise WebSocketError(error_msg)
+utils.error_handler.WebSocketError: [WebSocketServer] Exception: object bool can't be used in 'await' expression | Additional Info: Error starting WebSocket server (Code: None)
+
+2025-04-04 16:46:21,858 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-3' coro=<IocpProactor.accept.<locals>.accept_coro() running at C:\Users\tg469\.conda\envs\misalign\lib\asyncio\windows_events.py:580> wait_for=<_OverlappedFuture cancelled>>
+2025-04-04 16:46:21,858 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-4' coro=<IocpProactor.accept.<locals>.accept_coro() running at C:\Users\tg469\.conda\envs\misalign\lib\asyncio\windows_events.py:580> wait_for=<_OverlappedFuture cancelled>>
+2025-04-04 16:46:21,858 - api.websocket_server - INFO - Stopped WebSocket Server
+2025-04-04 16:46:21,948 - core.data_logger - INFO - Exported session data to C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250404_164508_0acda2d0\logs\session_export.json
+2025-04-04 16:46:21,949 - core.data_logger - INFO - Stopped DataLogger
+2025-04-04 16:46:22,022 - core.detector - INFO - Stopped Misalignment Detector
+2025-04-04 16:46:24,422 - core.llm_analyzer - INFO - Stopped LLM Analyzer
+2025-04-04 16:46:24,452 - core.audio_manager - ERROR - Exception: sample width not specified | Additional Info: Error saving audio segment
+2025-04-04 16:46:24,468 - core.audio_manager - ERROR - Traceback (most recent call last):
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\core\audio_manager.py", line 190, in _save_current_segment
+    wf.setsampwidth(self.py_audio.get_sample_size(self.format))
+AttributeError: 'NoneType' object has no attribute 'get_sample_size'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\core\audio_manager.py", line 188, in _save_current_segment
+    with wave.open(segment_file, 'wb') as wf:
+  File "C:\Users\tg469\.conda\envs\misalign\lib\wave.py", line 332, in __exit__
+    self.close()
+  File "C:\Users\tg469\.conda\envs\misalign\lib\wave.py", line 444, in close
+    self._ensure_header_written(0)
+  File "C:\Users\tg469\.conda\envs\misalign\lib\wave.py", line 464, in _ensure_header_written
+    raise Error('sample width not specified')
+wave.Error: sample width not specified
+
+2025-04-04 16:46:24,469 - core.audio_manager - INFO - Stopped audio recording and transcription
+2025-04-04 16:46:27,035 - core.camera_manager - INFO - Stopped camera for participant1
+2025-04-04 16:46:29,107 - core.camera_manager - INFO - Stopped camera for participant2
+2025-04-04 16:46:29,107 - core.camera_manager - INFO - Stopped all cameras
+2025-04-04 16:46:29,108 - ui.main_app - INFO - Detection stopped successfully
+2025-04-04 16:59:06,520 - ui.main_app - INFO - Initializing system components...
+2025-04-04 16:59:06,521 - core.camera_manager - INFO - Initialized Camera Manager
+2025-04-04 16:59:06,521 - core.camera_manager - INFO - Initialized camera for participant1 with device ID 0
+2025-04-04 16:59:06,521 - core.camera_manager - INFO - Added participant participant1 with camera 0
+2025-04-04 16:59:06,522 - core.camera_manager - INFO - Initialized camera for participant2 with device ID 1
+2025-04-04 16:59:06,522 - core.camera_manager - INFO - Added participant participant2 with camera 1
+2025-04-04 16:59:06,522 - core.audio_manager - INFO - Initialized Audio Manager
+2025-04-04 16:59:06,523 - core.llm_analyzer - INFO - Initialized LLM Analyzer with Gemma 3.1b
+2025-04-04 16:59:06,523 - core.detector - INFO - Initialized Misalignment Detector
+2025-04-04 16:59:06,523 - core.data_logger - INFO - Initialized DataLogger
+2025-04-04 16:59:06,531 - api.export_service - INFO - Initialized Export Service
+2025-04-04 16:59:06,531 - api.websocket_server - INFO - Initialized WebSocket Server on localhost:8765
+2025-04-04 16:59:06,531 - ui.main_app - INFO - Starting system components...

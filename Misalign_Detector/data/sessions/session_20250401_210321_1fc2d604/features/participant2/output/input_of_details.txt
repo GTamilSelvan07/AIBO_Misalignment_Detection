@@ -1,0 +1,10 @@
+Input:C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\features\participant2\input
+Input full path:C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\data\sessions\session_20250401_210321_1fc2d604\features\participant2\input
+Camera parameters:500,500,320,240
+Output csv:input.csv
+Gaze: 1
+AUs: 1
+Landmarks 2D: 1
+Landmarks 3D: 1
+Pose: 1
+Shape parameters: 0

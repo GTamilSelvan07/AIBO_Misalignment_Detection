@@ -1,0 +1,211 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 0.0,
+            "end": 4.32,
+            "text": " I'm opening the beer. When you open the beer, the beer is beer.",
+            "tokens": [
+                50364,
+                286,
+                478,
+                5193,
+                264,
+                8795,
+                13,
+                1133,
+                291,
+                1269,
+                264,
+                8795,
+                11,
+                264,
+                8795,
+                307,
+                8795,
+                13,
+                50614
+            ],
+            "avg_logprob": -0.47321427379335673,
+            "compression_ratio": 1.211111111111111,
+            "no_speech_prob": 0.03643798828125,
+            "words": [
+                {
+                    "start": 0.0,
+                    "end": 0.14,
+                    "word": " I'm",
+                    "probability": 0.3675212860107422
+                },
+                {
+                    "start": 0.14,
+                    "end": 0.46,
+                    "word": " opening",
+                    "probability": 0.873046875
+                },
+                {
+                    "start": 0.46,
+                    "end": 0.68,
+                    "word": " the",
+                    "probability": 0.9384765625
+                },
+                {
+                    "start": 0.68,
+                    "end": 0.88,
+                    "word": " beer.",
+                    "probability": 0.970703125
+                },
+                {
+                    "start": 2.2,
+                    "end": 2.54,
+                    "word": " When",
+                    "probability": 0.85986328125
+                },
+                {
+                    "start": 2.54,
+                    "end": 2.66,
+                    "word": " you",
+                    "probability": 0.99365234375
+                },
+                {
+                    "start": 2.66,
+                    "end": 2.9,
+                    "word": " open",
+                    "probability": 0.955078125
+                },
+                {
+                    "start": 2.9,
+                    "end": 3.1,
+                    "word": " the",
+                    "probability": 0.89453125
+                },
+                {
+                    "start": 3.1,
+                    "end": 3.38,
+                    "word": " beer,",
+                    "probability": 0.9931640625
+                },
+                {
+                    "start": 3.58,
+                    "end": 3.74,
+                    "word": " the",
+                    "probability": 0.45849609375
+                },
+                {
+                    "start": 3.74,
+                    "end": 3.9,
+                    "word": " beer",
+                    "probability": 0.7939453125
+                },
+                {
+                    "start": 3.9,
+                    "end": 4.04,
+                    "word": " is",
+                    "probability": 0.90185546875
+                },
+                {
+                    "start": 4.04,
+                    "end": 4.32,
+                    "word": " beer.",
+                    "probability": 0.30615234375
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 4.72,
+            "end": 7.9,
+            "text": " Yeah. Do you always decide?",
+            "tokens": [
+                50614,
+                865,
+                13,
+                1144,
+                291,
+                1009,
+                4536,
+                30,
+                50764
+            ],
+            "avg_logprob": -0.47321427379335673,
+            "compression_ratio": 1.211111111111111,
+            "no_speech_prob": 0.03643798828125,
+            "words": [
+                {
+                    "start": 4.72,
+                    "end": 4.94,
+                    "word": " Yeah.",
+                    "probability": 0.380859375
+                },
+                {
+                    "start": 6.46,
+                    "end": 6.94,
+                    "word": " Do",
+                    "probability": 0.488525390625
+                },
+                {
+                    "start": 6.94,
+                    "end": 7.1,
+                    "word": " you",
+                    "probability": 0.88671875
+                },
+                {
+                    "start": 7.1,
+                    "end": 7.44,
+                    "word": " always",
+                    "probability": 0.435302734375
+                },
+                {
+                    "start": 7.44,
+                    "end": 7.9,
+                    "word": " decide?",
+                    "probability": 0.38330078125
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 8.02,
+            "end": 8.84,
+            "text": " This makes sense.",
+            "tokens": [
+                50764,
+                639,
+                1669,
+                2020,
+                13,
+                50864
+            ],
+            "avg_logprob": -0.47321427379335673,
+            "compression_ratio": 1.211111111111111,
+            "no_speech_prob": 0.03643798828125,
+            "words": [
+                {
+                    "start": 8.02,
+                    "end": 8.24,
+                    "word": " This",
+                    "probability": 0.9384765625
+                },
+                {
+                    "start": 8.24,
+                    "end": 8.54,
+                    "word": " makes",
+                    "probability": 0.9580078125
+                },
+                {
+                    "start": 8.54,
+                    "end": 8.84,
+                    "word": " sense.",
+                    "probability": 0.998046875
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " I'm opening the beer. When you open the beer, the beer is beer. Yeah. Do you always decide? This makes sense."
+}

@@ -1,0 +1,11 @@
+{
+  "misalignment_detected": true,
+  "misalignment_scores": {
+    "participant1": 0.7,
+    "participant2": 0.3
+  },
+  "cause": "The conversation is highly conversational and lacks a clear objective. The participant seems to be struggling to understand the context and the other participant\u2019s intent. There\u2019s a noticeable pause and a shift in tone, suggesting a potential disconnect.",
+  "recommendation": "To resolve this, the speaker should explicitly state the goal of the conversation and provide more context. Perhaps a brief recap of the previous exchange would be helpful.  A simple, 'Let's start again,' or 'I want to understand what you're trying to say' would be beneficial.",
+  "timestamp": 1743494836.7505445,
+  "transcript": "I agree. I agree. Brace yourself. This is the second sentence. Okay. This is the second sentence. Please. What's going on? What's going on? Okay. The misalignment score is really low. How can I make it very in interest, increasing? I can finally understand this stuff, so don't worry about this. I'm opening the beer. When you open the beer, the beer is beer. Yeah. Do you always decide? This makes sense."
+}

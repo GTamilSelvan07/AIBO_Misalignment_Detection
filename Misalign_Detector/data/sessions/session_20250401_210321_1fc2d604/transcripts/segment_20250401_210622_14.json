@@ -1,0 +1,141 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 1.2,
+            "end": 9.3,
+            "text": " Okay. The misalignment score is really low. How can I make it very in interest, increasing?",
+            "tokens": [
+                50364,
+                1033,
+                13,
+                440,
+                3346,
+                304,
+                41134,
+                6175,
+                307,
+                534,
+                2295,
+                13,
+                1012,
+                393,
+                286,
+                652,
+                309,
+                588,
+                294,
+                1179,
+                11,
+                5662,
+                30,
+                50838
+            ],
+            "avg_logprob": -0.37656249046325685,
+            "compression_ratio": 1.0340909090909092,
+            "no_speech_prob": 0.0164642333984375,
+            "words": [
+                {
+                    "start": 1.2,
+                    "end": 1.84,
+                    "word": " Okay.",
+                    "probability": 0.0205841064453125
+                },
+                {
+                    "start": 3.28,
+                    "end": 3.92,
+                    "word": " The",
+                    "probability": 0.8896484375
+                },
+                {
+                    "start": 3.92,
+                    "end": 4.78,
+                    "word": " misalignment",
+                    "probability": 0.8492838541666666
+                },
+                {
+                    "start": 4.78,
+                    "end": 5.16,
+                    "word": " score",
+                    "probability": 0.71044921875
+                },
+                {
+                    "start": 5.16,
+                    "end": 5.42,
+                    "word": " is",
+                    "probability": 0.99560546875
+                },
+                {
+                    "start": 5.42,
+                    "end": 5.78,
+                    "word": " really",
+                    "probability": 0.990234375
+                },
+                {
+                    "start": 5.78,
+                    "end": 6.22,
+                    "word": " low.",
+                    "probability": 0.99755859375
+                },
+                {
+                    "start": 6.46,
+                    "end": 6.58,
+                    "word": " How",
+                    "probability": 0.990234375
+                },
+                {
+                    "start": 6.58,
+                    "end": 6.76,
+                    "word": " can",
+                    "probability": 0.990234375
+                },
+                {
+                    "start": 6.76,
+                    "end": 6.88,
+                    "word": " I",
+                    "probability": 0.984375
+                },
+                {
+                    "start": 6.88,
+                    "end": 7.14,
+                    "word": " make",
+                    "probability": 0.99853515625
+                },
+                {
+                    "start": 7.14,
+                    "end": 7.28,
+                    "word": " it",
+                    "probability": 0.95361328125
+                },
+                {
+                    "start": 7.28,
+                    "end": 7.56,
+                    "word": " very",
+                    "probability": 0.9814453125
+                },
+                {
+                    "start": 7.56,
+                    "end": 7.84,
+                    "word": " in",
+                    "probability": 0.378662109375
+                },
+                {
+                    "start": 7.84,
+                    "end": 8.56,
+                    "word": " interest,",
+                    "probability": 0.71240234375
+                },
+                {
+                    "start": 8.8,
+                    "end": 9.3,
+                    "word": " increasing?",
+                    "probability": 0.978515625
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Okay. The misalignment score is really low. How can I make it very in interest, increasing?"
+}

@@ -1,0 +1,83 @@
+{
+  "segments": [
+    {
+      "timestamp": "2025-04-01 21:04:06.026",
+      "unix_timestamp": 1743494646.0266142,
+      "audio_file": "segment_20250401_210402_0.wav",
+      "text": "Hi. I don't know what to do with this system. I'm pretty..."
+    },
+    {
+      "timestamp": "2025-04-01 21:04:16.193",
+      "unix_timestamp": 1743494656.1933835,
+      "audio_file": "segment_20250401_210412_1.wav",
+      "text": "Cool about this. Can we do something that is very good at this? This is frustrating. What to do?"
+    },
+    {
+      "timestamp": "2025-04-01 21:04:26.649",
+      "unix_timestamp": 1743494666.6490285,
+      "audio_file": "segment_20250401_210422_2.wav",
+      "text": "I am pretty sure that the system can detect all the stuff that we need to do, but we are not sure how to do that."
+    },
+    {
+      "timestamp": "2025-04-01 21:04:36.388",
+      "unix_timestamp": 1743494676.3880522,
+      "audio_file": "segment_20250401_210432_3.wav",
+      "text": "Can we just...tch...things? Hi, I'm not sure. This is frustrating. How can I do the system-vary things?"
+    },
+    {
+      "timestamp": "2025-04-01 21:04:46.047",
+      "unix_timestamp": 1743494686.0470793,
+      "audio_file": "segment_20250401_210442_4.wav",
+      "text": "Hm, this is sad."
+    },
+    {
+      "timestamp": "2025-04-01 21:05:16.214",
+      "unix_timestamp": 1743494716.2142603,
+      "audio_file": "segment_20250401_210512_7.wav",
+      "text": "Well, I was... did I call this meeting? This is not a meeting because I spent the night like this. Yeah. And we were like, how are you going to spend the night like this? Yeah, I was..."
+    },
+    {
+      "timestamp": "2025-04-01 21:05:36.063",
+      "unix_timestamp": 1743494736.063154,
+      "audio_file": "segment_20250401_210532_9.wav",
+      "text": "I agree. I agree. Brace yourself. This is the second sentence. Okay. This is the second sentence. Please."
+    },
+    {
+      "timestamp": "2025-04-01 21:06:16.020",
+      "unix_timestamp": 1743494776.0202563,
+      "audio_file": "segment_20250401_210612_13.wav",
+      "text": "What's going on? What's going on?"
+    },
+    {
+      "timestamp": "2025-04-01 21:06:26.058",
+      "unix_timestamp": 1743494786.0580869,
+      "audio_file": "segment_20250401_210622_14.wav",
+      "text": "Okay. The misalignment score is really low. How can I make it very in interest, increasing?"
+    },
+    {
+      "timestamp": "2025-04-01 21:06:56.016",
+      "unix_timestamp": 1743494816.016754,
+      "audio_file": "segment_20250401_210652_17.wav",
+      "text": "I can finally understand this stuff, so don't worry about this."
+    },
+    {
+      "timestamp": "2025-04-01 21:07:06.221",
+      "unix_timestamp": 1743494826.221483,
+      "audio_file": "segment_20250401_210702_18.wav",
+      "text": "I'm opening the beer. When you open the beer, the beer is beer. Yeah. Do you always decide? This makes sense."
+    },
+    {
+      "timestamp": "2025-04-01 21:07:16.134",
+      "unix_timestamp": 1743494836.1348128,
+      "audio_file": "segment_20250401_210712_19.wav",
+      "text": "I need to... I need to get good at everything. Mm-hmm."
+    },
+    {
+      "timestamp": "2025-04-01 21:07:36.061",
+      "unix_timestamp": 1743494856.0615046,
+      "audio_file": "segment_20250401_210732_21.wav",
+      "text": "Yeah. Mm, you smell..."
+    }
+  ],
+  "updated_at": "2025-04-01 21:07:36.062"
+}

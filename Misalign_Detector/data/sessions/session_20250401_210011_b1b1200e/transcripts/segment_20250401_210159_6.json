@@ -1,0 +1,67 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 2.86,
+            "end": 4.68,
+            "text": " Oh my god, this is sad.",
+            "tokens": [
+                50364,
+                876,
+                452,
+                3044,
+                11,
+                341,
+                307,
+                4227,
+                13,
+                50564
+            ],
+            "avg_logprob": -0.4637784307653254,
+            "compression_ratio": 0.7931034482758621,
+            "no_speech_prob": 0.056182861328125,
+            "words": [
+                {
+                    "start": 2.86,
+                    "end": 3.38,
+                    "word": " Oh",
+                    "probability": 0.56201171875
+                },
+                {
+                    "start": 3.38,
+                    "end": 3.6,
+                    "word": " my",
+                    "probability": 0.8876953125
+                },
+                {
+                    "start": 3.6,
+                    "end": 3.9,
+                    "word": " god,",
+                    "probability": 0.6865234375
+                },
+                {
+                    "start": 3.9,
+                    "end": 4.16,
+                    "word": " this",
+                    "probability": 0.98876953125
+                },
+                {
+                    "start": 4.16,
+                    "end": 4.3,
+                    "word": " is",
+                    "probability": 0.99658203125
+                },
+                {
+                    "start": 4.3,
+                    "end": 4.68,
+                    "word": " sad.",
+                    "probability": 0.9873046875
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Oh my god, this is sad."
+}

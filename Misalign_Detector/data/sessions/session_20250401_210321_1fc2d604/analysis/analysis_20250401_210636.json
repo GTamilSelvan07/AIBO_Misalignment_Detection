@@ -1,0 +1,11 @@
+{
+  "misalignment_detected": true,
+  "misalignment_scores": {
+    "participant1": 0.7,
+    "participant2": 0.3
+  },
+  "cause": "The conversation is highly fragmented and lacks a clear, logical progression. The user expresses a feeling of being trapped and overwhelmed, which suggests a disconnect from the initial task. The user's responses are often hesitant and confused, indicating a potential lack of understanding of the task or the context.",
+  "recommendation": "The conversation needs to be restructured. Start with a clear, concise explanation of the task. Ask the user to provide a brief overview of their current situation. Offer support and reassurance to alleviate the user's anxiety. Break down the task into smaller, manageable steps. Consider using a more direct and reassuring tone to reduce the user's confusion.",
+  "timestamp": 1743494796.6184375,
+  "transcript": "Hm, this is sad. Well, I was... did I call this meeting? This is not a meeting because I spent the night like this. Yeah. And we were like, how are you going to spend the night like this? Yeah, I was... I agree. I agree. Brace yourself. This is the second sentence. Okay. This is the second sentence. Please. What's going on? What's going on? Okay. The misalignment score is really low. How can I make it very in interest, increasing?"
+}

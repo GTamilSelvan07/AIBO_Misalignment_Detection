@@ -1,0 +1,204 @@
+{
+  "session_id": "session_20250401_210321_1fc2d604",
+  "start_time": "2025-04-01 21:03:33.670",
+  "detections": [
+    {
+      "timestamp": 1743494642.543855,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.0,
+        "participant1": 0.0
+      },
+      "cause": ""
+    },
+    {
+      "timestamp": 1743494652.618581,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.0,
+        "participant1": 0.0
+      },
+      "cause": ""
+    },
+    {
+      "timestamp": 1743494662.6964293,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.18,
+        "participant1": 0.42
+      },
+      "cause": "The participant1 expresses a sense of confusion and frustration regarding a system, while the participant2 remains silent and doesn't offer any clarification or engagement. There's a significant disconnect in their responses, suggesting a potential misunderstanding of the initial statement."
+    },
+    {
+      "timestamp": 1743494672.7551901,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.18,
+        "participant1": 0.42
+      },
+      "cause": "The participant expresses frustration with a system, indicating a lack of understanding of its functionality. The statement 'I'm pretty... Cool about this' suggests a reluctance to engage with the problem, potentially indicating a deeper level of confusion than simply needing guidance."
+    },
+    {
+      "timestamp": 1743494682.8101223,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.18,
+        "participant1": 0.42
+      },
+      "cause": "The participant expresses frustration and uncertainty about a system, indicating a lack of understanding of the system's capabilities and a potential need for guidance. The statement 'I am pretty sure that the system can detect all the stuff that we need to do' suggests a belief that the system is capable of handling the task, but the lack of specific details or a clear request for assistance points to a potential misalignment."
+    },
+    {
+      "timestamp": 1743494692.8688426,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.12,
+        "participant1": 0.48
+      },
+      "cause": "The participant expresses significant confusion and frustration regarding the system's capabilities and how to utilize it effectively. They are clearly struggling with the system's functionality and are seeking guidance on how to proceed."
+    },
+    {
+      "timestamp": 1743494702.9085343,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.12,
+        "participant1": 0.48
+      },
+      "cause": "The participant expresses significant confusion and frustration regarding the system's capabilities and the lack of clear guidance. They are clearly struggling to understand how to proceed and are exhibiting a sense of helplessness and agitation."
+    },
+    {
+      "timestamp": 1743494712.9553025,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.12,
+        "participant1": 0.48
+      },
+      "cause": "The participant expresses significant confusion and frustration regarding the system's capabilities and the lack of clear guidance. They are clearly struggling to understand how to proceed and are exhibiting a sense of helplessness and agitation."
+    },
+    {
+      "timestamp": 1743494722.9955745,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.12,
+        "participant1": 0.48
+      },
+      "cause": "The participant expresses significant confusion and frustration regarding the system's capabilities and the lack of clear guidance. They are clearly struggling to understand how to proceed and are exhibiting a sense of helplessness and agitation."
+    },
+    {
+      "timestamp": 1743494733.0703619,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.12,
+        "participant1": 0.48
+      },
+      "cause": "The conversation is riddled with subtle but significant shifts in topic and tone. Participant 1 frequently interrupts and shifts the conversation to unrelated matters, while Participant 2 seems to be struggling to keep up with the flow and occasionally provides irrelevant or confusing responses. There's a noticeable lack of shared understanding and a potential for misinterpretation of each other's intentions."
+    },
+    {
+      "timestamp": 1743494743.1442363,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.12,
+        "participant1": 0.48
+      },
+      "cause": "The conversation is riddled with subtle but significant shifts in topic and tone. Participant 1 frequently interrupts and shifts the conversation to unrelated matters, while Participant 2 seems to be struggling to keep up with the flow and occasionally provides irrelevant or confusing responses. There's a noticeable lack of shared understanding and a potential for misinterpretation of each other's intentions."
+    },
+    {
+      "timestamp": 1743494753.2018225,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.12,
+        "participant1": 0.48
+      },
+      "cause": "The conversation is largely a passive, somewhat detached exchange. There's a noticeable lack of proactive engagement or clarification. The user expresses frustration and a desire for a more structured process, suggesting a potential misalignment with the current flow of communication. The user's statement 'This is not a meeting because I spent the night like this' indicates a disconnect between the stated purpose and the actual experience."
+    },
+    {
+      "timestamp": 1743494763.2620142,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.12,
+        "participant1": 0.48
+      },
+      "cause": "The conversation is largely a passive, somewhat detached exchange. There's a noticeable lack of proactive engagement or clarification. The user expresses frustration and a desire for a more structured process, suggesting a potential misalignment with the current flow of communication. The user's statement 'This is not a meeting because I spent the night like this' indicates a disconnect between the stated purpose and the actual experience."
+    },
+    {
+      "timestamp": 1743494773.3072789,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.12,
+        "participant1": 0.48
+      },
+      "cause": "The conversation is largely a passive, somewhat detached exchange. There's a noticeable lack of proactive engagement or clarification. The user expresses frustration and a desire for a more structured process, suggesting a potential misalignment with the current flow of communication. The user's statement 'This is not a meeting because I spent the night like this' indicates a disconnect between the stated purpose and the actual experience."
+    },
+    {
+      "timestamp": 1743494783.3543472,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.12,
+        "participant1": 0.48
+      },
+      "cause": "The conversation is largely a passive, somewhat detached exchange. There's a noticeable lack of proactive engagement or clarification. The user expresses frustration and a desire for a more structured process, suggesting a potential misalignment with the current flow of communication. The user's statement 'This is not a meeting because I spent the night like this' indicates a disconnect between the stated purpose and the actual experience."
+    },
+    {
+      "timestamp": 1743494793.4275634,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.12,
+        "participant1": 0.48
+      },
+      "cause": "The conversation is highly fragmented and lacks a clear, logical progression. There\u2019s a sudden shift in topic \u2013 from a seemingly normal discussion to a panicked, rambling state. The lack of context and a consistent narrative creates a significant disconnect between the participants."
+    },
+    {
+      "timestamp": 1743494803.4897158,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.18,
+        "participant1": 0.42
+      },
+      "cause": "The conversation is highly fragmented and lacks a clear, logical progression. The user expresses a feeling of being trapped and overwhelmed, which suggests a disconnect from the initial task. The user's responses are often hesitant and confused, indicating a potential lack of understanding of the task or the context."
+    },
+    {
+      "timestamp": 1743494813.539121,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.18,
+        "participant1": 0.42
+      },
+      "cause": "The conversation is highly fragmented and lacks a clear, logical progression. The user expresses a feeling of being trapped and overwhelmed, which suggests a disconnect from the initial task. The user's responses are often hesitant and confused, indicating a potential lack of understanding of the task or the context."
+    },
+    {
+      "timestamp": 1743494823.5943103,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.18,
+        "participant1": 0.42
+      },
+      "cause": "The conversation is highly fragmented and lacks a clear, logical progression. The user expresses a feeling of being trapped and overwhelmed, which suggests a disconnect from the initial task. The user's responses are often hesitant and confused, indicating a potential lack of understanding of the task or the context."
+    },
+    {
+      "timestamp": 1743494833.6670265,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.18,
+        "participant1": 0.42
+      },
+      "cause": "The conversation is highly fragmented and lacks a clear narrative. The user expresses confusion about the purpose of the conversation and asks for clarification, suggesting a lack of understanding and a potential disconnect between the initial request and the ongoing dialogue. The user's repeated questioning about 'how are you going to spend the night like this' indicates a heightened state of anxiety and disorientation, potentially stemming from a cognitive dissonance or a feeling of being overwhelmed."
+    },
+    {
+      "timestamp": 1743494843.7295692,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.18,
+        "participant1": 0.42
+      },
+      "cause": "The conversation is highly conversational and lacks a clear objective. The participant seems to be struggling to understand the context and the other participant\u2019s intent. There\u2019s a noticeable pause and a shift in tone, suggesting a potential disconnect."
+    },
+    {
+      "timestamp": 1743494853.8013148,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.18,
+        "participant1": 0.42
+      },
+      "cause": "The conversation is highly suggestive of a significant disconnect between the speaker and the listener. The speaker is expressing a desire for mastery and a feeling of being overwhelmed, while the listener seems to be struggling to grasp the underlying meaning and intent. There\u2019s a noticeable lack of shared understanding and a potential for misinterpretation. The speaker\u2019s phrasing suggests a desire to dominate and control, which contrasts with a collaborative and receptive approach."
+    }
+  ]
+}

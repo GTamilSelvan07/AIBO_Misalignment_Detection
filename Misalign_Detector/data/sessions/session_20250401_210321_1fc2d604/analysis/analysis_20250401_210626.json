@@ -1,0 +1,11 @@
+{
+  "misalignment_detected": true,
+  "misalignment_scores": {
+    "participant1": 0.8,
+    "participant2": 0.2
+  },
+  "cause": "The conversation is highly fragmented and lacks a clear, logical progression. There\u2019s a sudden shift in topic \u2013 from a seemingly normal discussion to a panicked, rambling state. The lack of context and a consistent narrative creates a significant disconnect between the participants.",
+  "recommendation": "Initiate a structured conversation. Begin with a brief recap of the previous discussion and then gently steer the conversation back to a focused topic. Acknowledge the user's distress and offer reassurance. Perhaps a simple, 'I understand you're feeling stressed. Let's try to refocus on the original goal of this meeting.'",
+  "timestamp": 1743494786.5090408,
+  "transcript": "Can we just...tch...things? Hi, I'm not sure. This is frustrating. How can I do the system-vary things? Hm, this is sad. Well, I was... did I call this meeting? This is not a meeting because I spent the night like this. Yeah. And we were like, how are you going to spend the night like this? Yeah, I was... I agree. I agree. Brace yourself. This is the second sentence. Okay. This is the second sentence. Please. What's going on? What's going on?"
+}

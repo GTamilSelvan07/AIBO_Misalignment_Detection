@@ -1,0 +1,225 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 0.0,
+            "end": 1.38,
+            "text": " I agree. I agree.",
+            "tokens": [
+                50364,
+                286,
+                3986,
+                13,
+                286,
+                3986,
+                13,
+                50464
+            ],
+            "avg_logprob": -0.5975507014506573,
+            "compression_ratio": 1.4189189189189189,
+            "no_speech_prob": 0.419189453125,
+            "words": [
+                {
+                    "start": 0.0,
+                    "end": 0.7,
+                    "word": " I",
+                    "probability": 0.297119140625
+                },
+                {
+                    "start": 0.7,
+                    "end": 0.9,
+                    "word": " agree.",
+                    "probability": 0.96630859375
+                },
+                {
+                    "start": 1.12,
+                    "end": 1.22,
+                    "word": " I",
+                    "probability": 0.5625
+                },
+                {
+                    "start": 1.22,
+                    "end": 1.38,
+                    "word": " agree.",
+                    "probability": 0.96435546875
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 2.66,
+            "end": 3.3,
+            "text": " Brace yourself.",
+            "tokens": [
+                50464,
+                1603,
+                617,
+                1803,
+                13,
+                50564
+            ],
+            "avg_logprob": -0.5975507014506573,
+            "compression_ratio": 1.4189189189189189,
+            "no_speech_prob": 0.419189453125,
+            "words": [
+                {
+                    "start": 2.66,
+                    "end": 3.1,
+                    "word": " Brace",
+                    "probability": 0.493804931640625
+                },
+                {
+                    "start": 3.1,
+                    "end": 3.3,
+                    "word": " yourself.",
+                    "probability": 0.21044921875
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 4.44,
+            "end": 5.36,
+            "text": " This is the second sentence.",
+            "tokens": [
+                50564,
+                639,
+                307,
+                264,
+                1150,
+                8174,
+                13,
+                50664
+            ],
+            "avg_logprob": -0.5975507014506573,
+            "compression_ratio": 1.4189189189189189,
+            "no_speech_prob": 0.419189453125,
+            "words": [
+                {
+                    "start": 4.44,
+                    "end": 4.54,
+                    "word": " This",
+                    "probability": 0.1826171875
+                },
+                {
+                    "start": 4.54,
+                    "end": 4.72,
+                    "word": " is",
+                    "probability": 0.91845703125
+                },
+                {
+                    "start": 4.72,
+                    "end": 4.88,
+                    "word": " the",
+                    "probability": 0.2254638671875
+                },
+                {
+                    "start": 4.88,
+                    "end": 5.14,
+                    "word": " second",
+                    "probability": 0.004913330078125
+                },
+                {
+                    "start": 5.14,
+                    "end": 5.36,
+                    "word": " sentence.",
+                    "probability": 8.535385131835938e-05
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 4,
+            "seek": 0,
+            "start": 5.8,
+            "end": 6.1,
+            "text": " Okay.",
+            "tokens": [
+                50664,
+                1033,
+                13,
+                50714
+            ],
+            "avg_logprob": -0.5975507014506573,
+            "compression_ratio": 1.4189189189189189,
+            "no_speech_prob": 0.419189453125,
+            "words": [
+                {
+                    "start": 5.8,
+                    "end": 6.1,
+                    "word": " Okay.",
+                    "probability": 0.1619873046875
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 5,
+            "seek": 0,
+            "start": 6.34,
+            "end": 7.8,
+            "text": " This is the second sentence. Please.",
+            "tokens": [
+                50714,
+                639,
+                307,
+                264,
+                1150,
+                8174,
+                13,
+                2555,
+                13,
+                50814
+            ],
+            "avg_logprob": -0.5975507014506573,
+            "compression_ratio": 1.4189189189189189,
+            "no_speech_prob": 0.419189453125,
+            "words": [
+                {
+                    "start": 6.34,
+                    "end": 6.56,
+                    "word": " This",
+                    "probability": 0.382080078125
+                },
+                {
+                    "start": 6.56,
+                    "end": 6.94,
+                    "word": " is",
+                    "probability": 0.89697265625
+                },
+                {
+                    "start": 6.94,
+                    "end": 7.14,
+                    "word": " the",
+                    "probability": 0.8232421875
+                },
+                {
+                    "start": 7.14,
+                    "end": 7.14,
+                    "word": " second",
+                    "probability": 0.8310546875
+                },
+                {
+                    "start": 7.14,
+                    "end": 7.36,
+                    "word": " sentence.",
+                    "probability": 0.88232421875
+                },
+                {
+                    "start": 7.62,
+                    "end": 7.8,
+                    "word": " Please.",
+                    "probability": 0.84130859375
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " I agree. I agree. Brace yourself. This is the second sentence. Okay. This is the second sentence. Please."
+}

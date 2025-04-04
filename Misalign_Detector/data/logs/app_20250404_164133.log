@@ -1,0 +1,10 @@
+2025-04-04 16:41:33,941 - __main__ - ERROR - Exception: name 'StatusBar' is not defined | Additional Info: Error in main function
+2025-04-04 16:41:33,942 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\main.py", line 158, in main
+    run_app()
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\ui\main_app.py", line 684, in run_app
+    app = MisalignmentApp(root)
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\ui\main_app.py", line 56, in __init__
+    self.status_bar = StatusBar(self.root)
+NameError: name 'StatusBar' is not defined
+

@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "session_id": "session_20250404_164508_0acda2d0",
+    "start_time": "2025-04-04 16:45:26.081",
+    "participants": [
+      "participant1",
+      "participant2"
+    ],
+    "end_time": "2025-04-04 16:46:21.940",
+    "total_duration": 55.859,
+    "misalignment_summary": {
+      "average_score": 0.0,
+      "peak_score": 0.0,
+      "duration_above_threshold": 0.0
+    }
+  },
+  "logs": {
+    "csv_path": "logs\\misalignment_scores.csv",
+    "json_path": "logs\\session_log.json"
+  },
+  "files": {
+    "video": [
+      "video\\participant1.avi",
+      "video\\participant2.avi"
+    ],
+    "audio": [
+      "audio\\segment_20250404_164556_0.wav",
+      "audio\\segment_20250404_164606_1.wav",
+      "audio\\segment_20250404_164616_2.wav"
+    ],
+    "transcripts": [
+      "transcripts\\segment_20250404_164556_0.json",
+      "transcripts\\segment_20250404_164606_1.json",
+      "transcripts\\segment_20250404_164616_2.json",
+      "transcripts\\transcript.json"
+    ],
+    "features": [
+      "features\\participant1\\participant1_features.csv",
+      "features\\participant2\\participant2_features.csv"
+    ],
+    "analysis": [
+      "analysis\\analysis_20250404_164621.json"
+    ]
+  },
+  "summary": {
+    "misalignment_score_history": [
+      {
+        "timestamp": "2025-04-04 16:45:56.870",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:45:56.870",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:45:56.870",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:45:56.870",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:45:56.870",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:45:56.870",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:45:56.870",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:45:56.870",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:45:56.870",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:45:56.870",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:06.874",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:06.874",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:06.874",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:06.874",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:06.874",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:06.874",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:06.874",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:06.874",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:14.821",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:15.823",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:16.903",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:17.825",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:18.826",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:19.826",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-04 16:46:20.828",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      }
+    ],
+    "transcript_highlights": []
+  }
+}

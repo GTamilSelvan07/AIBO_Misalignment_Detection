@@ -1,0 +1,110 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 5.02,
+            "end": 9.0,
+            "text": " Hi there, how are you doing? This is not the radio thing.",
+            "tokens": [
+                50364,
+                2421,
+                456,
+                11,
+                577,
+                366,
+                291,
+                884,
+                30,
+                639,
+                307,
+                406,
+                264,
+                6477,
+                551,
+                13,
+                50614
+            ],
+            "avg_logprob": -0.3723958366447025,
+            "compression_ratio": 0.9661016949152542,
+            "no_speech_prob": 0.092041015625,
+            "words": [
+                {
+                    "start": 5.02,
+                    "end": 5.5,
+                    "word": " Hi",
+                    "probability": 0.51708984375
+                },
+                {
+                    "start": 5.5,
+                    "end": 5.7,
+                    "word": " there,",
+                    "probability": 0.8427734375
+                },
+                {
+                    "start": 5.94,
+                    "end": 6.12,
+                    "word": " how",
+                    "probability": 0.927734375
+                },
+                {
+                    "start": 6.12,
+                    "end": 6.26,
+                    "word": " are",
+                    "probability": 0.9931640625
+                },
+                {
+                    "start": 6.26,
+                    "end": 6.4,
+                    "word": " you",
+                    "probability": 0.99755859375
+                },
+                {
+                    "start": 6.4,
+                    "end": 6.64,
+                    "word": " doing?",
+                    "probability": 0.98681640625
+                },
+                {
+                    "start": 7.5,
+                    "end": 7.72,
+                    "word": " This",
+                    "probability": 0.8447265625
+                },
+                {
+                    "start": 7.72,
+                    "end": 7.88,
+                    "word": " is",
+                    "probability": 0.994140625
+                },
+                {
+                    "start": 7.88,
+                    "end": 8.12,
+                    "word": " not",
+                    "probability": 0.8505859375
+                },
+                {
+                    "start": 8.12,
+                    "end": 8.36,
+                    "word": " the",
+                    "probability": 0.83642578125
+                },
+                {
+                    "start": 8.36,
+                    "end": 8.64,
+                    "word": " radio",
+                    "probability": 0.55810546875
+                },
+                {
+                    "start": 8.64,
+                    "end": 9.0,
+                    "word": " thing.",
+                    "probability": 0.970703125
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Hi there, how are you doing? This is not the radio thing."
+}

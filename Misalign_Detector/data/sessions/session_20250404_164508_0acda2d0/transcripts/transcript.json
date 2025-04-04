@@ -1,0 +1,23 @@
+{
+  "segments": [
+    {
+      "timestamp": "2025-04-04 16:46:08.147",
+      "unix_timestamp": 1743738368.1472855,
+      "audio_file": "segment_20250404_164556_0.wav",
+      "text": "Hello."
+    },
+    {
+      "timestamp": "2025-04-04 16:46:11.991",
+      "unix_timestamp": 1743738371.9918792,
+      "audio_file": "segment_20250404_164606_1.wav",
+      "text": "Hi. This is very time consuming. I don't know what to do."
+    },
+    {
+      "timestamp": "2025-04-04 16:46:20.797",
+      "unix_timestamp": 1743738380.797157,
+      "audio_file": "segment_20250404_164616_2.wav",
+      "text": "I kind of regulated things, so I'm not sure, should I just do this or that."
+    }
+  ],
+  "updated_at": "2025-04-04 16:46:20.797"
+}

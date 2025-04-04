@@ -1,0 +1,125 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 3.71,
+            "end": 9.31,
+            "text": " Hi, how are you doing? Oh no, this is not a bad thing though.",
+            "tokens": [
+                50364,
+                2421,
+                11,
+                577,
+                366,
+                291,
+                884,
+                30,
+                876,
+                572,
+                11,
+                341,
+                307,
+                406,
+                257,
+                1578,
+                551,
+                1673,
+                13,
+                50664
+            ],
+            "avg_logprob": -0.3015253089723133,
+            "compression_ratio": 0.953125,
+            "no_speech_prob": 0.042572021484375,
+            "words": [
+                {
+                    "start": 3.71,
+                    "end": 4.75,
+                    "word": " Hi,",
+                    "probability": 0.716796875
+                },
+                {
+                    "start": 5.03,
+                    "end": 5.27,
+                    "word": " how",
+                    "probability": 0.92626953125
+                },
+                {
+                    "start": 5.27,
+                    "end": 5.39,
+                    "word": " are",
+                    "probability": 0.99072265625
+                },
+                {
+                    "start": 5.39,
+                    "end": 5.55,
+                    "word": " you",
+                    "probability": 0.99755859375
+                },
+                {
+                    "start": 5.55,
+                    "end": 5.77,
+                    "word": " doing?",
+                    "probability": 0.98046875
+                },
+                {
+                    "start": 6.35,
+                    "end": 6.81,
+                    "word": " Oh",
+                    "probability": 0.9013671875
+                },
+                {
+                    "start": 6.81,
+                    "end": 7.03,
+                    "word": " no,",
+                    "probability": 0.65087890625
+                },
+                {
+                    "start": 7.67,
+                    "end": 7.95,
+                    "word": " this",
+                    "probability": 0.95703125
+                },
+                {
+                    "start": 7.95,
+                    "end": 8.11,
+                    "word": " is",
+                    "probability": 0.99365234375
+                },
+                {
+                    "start": 8.11,
+                    "end": 8.33,
+                    "word": " not",
+                    "probability": 0.99267578125
+                },
+                {
+                    "start": 8.33,
+                    "end": 8.49,
+                    "word": " a",
+                    "probability": 0.99658203125
+                },
+                {
+                    "start": 8.49,
+                    "end": 8.79,
+                    "word": " bad",
+                    "probability": 0.9072265625
+                },
+                {
+                    "start": 8.79,
+                    "end": 9.07,
+                    "word": " thing",
+                    "probability": 0.9755859375
+                },
+                {
+                    "start": 9.07,
+                    "end": 9.31,
+                    "word": " though.",
+                    "probability": 0.87841796875
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Hi, how are you doing? Oh no, this is not a bad thing though."
+}

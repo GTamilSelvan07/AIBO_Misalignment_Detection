@@ -1,0 +1,11 @@
+{
+  "misalignment_detected": true,
+  "misalignment_scores": {
+    "participant1": 0.7,
+    "participant2": 0.3
+  },
+  "cause": "The participant expressing 'This is very time consuming' suggests a lack of understanding of the request to help. They are acknowledging a problem but not grasping the specific action being taken. The initial statement implies a need for assistance, but the lack of detail suggests a potential misunderstanding of what's being asked.",
+  "recommendation": "Ask for clarification. Instead of simply stating 'I don't know what to do,' the participant should ask a specific question like, 'Could you tell me what you need help with?' or 'What's the goal of this task?'",
+  "timestamp": 1743738381.3879068,
+  "transcript": "Hello. Hi. This is very time consuming. I don't know what to do."
+}

@@ -1,0 +1,18 @@
+{
+  "timestamp": 1743493523.7039495,
+  "formatted_time": "2025-04-01 20:45:23.703",
+  "facial_scores": {
+    "participant1": 0.0,
+    "participant2": 0.0
+  },
+  "llm_scores": {
+    "participant1": 0.0,
+    "participant2": 0.0
+  },
+  "combined_scores": {
+    "participant2": 0.0,
+    "participant1": 0.0
+  },
+  "misalignment_detected": false,
+  "transcript": ""
+}

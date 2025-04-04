@@ -1,0 +1,11 @@
+{
+  "misalignment_detected": true,
+  "misalignment_scores": {
+    "participant1": 0.8,
+    "participant2": 0.2
+  },
+  "cause": "The participant expresses significant confusion and frustration regarding the system's capabilities and the lack of clear guidance. They are clearly struggling to understand how to proceed and are exhibiting a sense of helplessness and agitation.",
+  "recommendation": "Offer a structured walkthrough or guide to help the participant understand the system's functionalities and how to effectively utilize it. Perhaps a simplified explanation of the system's core capabilities would be beneficial. Acknowledge their feelings of frustration and offer reassurance that the system *can* detect the necessary things, just not how to do it yet.",
+  "timestamp": 1743494695.9697409,
+  "transcript": "Hi. I don't know what to do with this system. I'm pretty... Cool about this. Can we do something that is very good at this? This is frustrating. What to do? I am pretty sure that the system can detect all the stuff that we need to do, but we are not sure how to do that. Can we just...tch...things? Hi, I'm not sure. This is frustrating. How can I do the system-vary things? Hm, this is sad."
+}

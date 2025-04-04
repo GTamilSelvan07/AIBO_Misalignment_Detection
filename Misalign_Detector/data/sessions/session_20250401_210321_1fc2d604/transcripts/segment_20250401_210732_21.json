@@ -1,0 +1,71 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 0.0,
+            "end": 0.3,
+            "text": " Yeah.",
+            "tokens": [
+                50364,
+                865,
+                13,
+                50464
+            ],
+            "avg_logprob": -0.7669271032015482,
+            "compression_ratio": 0.7333333333333333,
+            "no_speech_prob": 0.1295166015625,
+            "words": [
+                {
+                    "start": 0.0,
+                    "end": 0.3,
+                    "word": " Yeah.",
+                    "probability": 0.45947265625
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 4.93,
+            "end": 7.1,
+            "text": " Mm, you smell...",
+            "tokens": [
+                50464,
+                8266,
+                11,
+                291,
+                4316,
+                485,
+                50564
+            ],
+            "avg_logprob": -0.7669271032015482,
+            "compression_ratio": 0.7333333333333333,
+            "no_speech_prob": 0.1295166015625,
+            "words": [
+                {
+                    "start": 4.93,
+                    "end": 5.62,
+                    "word": " Mm,",
+                    "probability": 0.275634765625
+                },
+                {
+                    "start": 5.8,
+                    "end": 5.94,
+                    "word": " you",
+                    "probability": 0.65771484375
+                },
+                {
+                    "start": 5.94,
+                    "end": 7.1,
+                    "word": " smell...",
+                    "probability": 0.6109619140625
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Yeah. Mm, you smell..."
+}

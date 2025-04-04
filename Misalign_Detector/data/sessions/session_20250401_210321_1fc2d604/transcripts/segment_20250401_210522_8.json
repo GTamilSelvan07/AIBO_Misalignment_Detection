@@ -1,0 +1,80 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 0.0,
+            "end": 1.34,
+            "text": " I was going to send a statement outside.",
+            "tokens": [
+                50364,
+                286,
+                390,
+                516,
+                281,
+                2845,
+                257,
+                5629,
+                2380,
+                13,
+                50474
+            ],
+            "avg_logprob": -0.9375888208548228,
+            "compression_ratio": 0.8333333333333334,
+            "no_speech_prob": 0.258544921875,
+            "words": [
+                {
+                    "start": 0.0,
+                    "end": 0.0,
+                    "word": " I",
+                    "probability": 0.22509765625
+                },
+                {
+                    "start": 0.0,
+                    "end": 0.08,
+                    "word": " was",
+                    "probability": 0.3310546875
+                },
+                {
+                    "start": 0.08,
+                    "end": 0.18,
+                    "word": " going",
+                    "probability": 0.289306640625
+                },
+                {
+                    "start": 0.18,
+                    "end": 0.3,
+                    "word": " to",
+                    "probability": 0.998046875
+                },
+                {
+                    "start": 0.3,
+                    "end": 0.52,
+                    "word": " send",
+                    "probability": 0.8740234375
+                },
+                {
+                    "start": 0.52,
+                    "end": 0.66,
+                    "word": " a",
+                    "probability": 0.166015625
+                },
+                {
+                    "start": 0.66,
+                    "end": 0.88,
+                    "word": " statement",
+                    "probability": 0.22509765625
+                },
+                {
+                    "start": 0.88,
+                    "end": 1.34,
+                    "word": " outside.",
+                    "probability": 0.76904296875
+                }
+            ],
+            "temperature": 1.0
+        }
+    ],
+    "language": "en",
+    "text": " I was going to send a statement outside."
+}

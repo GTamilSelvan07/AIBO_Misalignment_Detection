@@ -1,0 +1,112 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 5.2,
+            "end": 9.96,
+            "text": " Hi. I don't know what to do with this system. I'm pretty...",
+            "tokens": [
+                50364,
+                2421,
+                13,
+                286,
+                500,
+                380,
+                458,
+                437,
+                281,
+                360,
+                365,
+                341,
+                1185,
+                13,
+                286,
+                478,
+                1238,
+                485,
+                50864
+            ],
+            "avg_logprob": -0.32910156697034837,
+            "compression_ratio": 0.921875,
+            "no_speech_prob": 0.3154296875,
+            "words": [
+                {
+                    "start": 5.2,
+                    "end": 5.66,
+                    "word": " Hi.",
+                    "probability": 0.513671875
+                },
+                {
+                    "start": 6.44,
+                    "end": 6.78,
+                    "word": " I",
+                    "probability": 0.96826171875
+                },
+                {
+                    "start": 6.78,
+                    "end": 7.0,
+                    "word": " don't",
+                    "probability": 0.967041015625
+                },
+                {
+                    "start": 7.0,
+                    "end": 7.08,
+                    "word": " know",
+                    "probability": 0.9892578125
+                },
+                {
+                    "start": 7.08,
+                    "end": 7.3,
+                    "word": " what",
+                    "probability": 0.9873046875
+                },
+                {
+                    "start": 7.3,
+                    "end": 7.46,
+                    "word": " to",
+                    "probability": 0.9931640625
+                },
+                {
+                    "start": 7.46,
+                    "end": 7.62,
+                    "word": " do",
+                    "probability": 0.99560546875
+                },
+                {
+                    "start": 7.62,
+                    "end": 7.84,
+                    "word": " with",
+                    "probability": 0.994140625
+                },
+                {
+                    "start": 7.84,
+                    "end": 8.08,
+                    "word": " this",
+                    "probability": 0.986328125
+                },
+                {
+                    "start": 8.08,
+                    "end": 8.6,
+                    "word": " system.",
+                    "probability": 0.9951171875
+                },
+                {
+                    "start": 9.28,
+                    "end": 9.44,
+                    "word": " I'm",
+                    "probability": 0.7548828125
+                },
+                {
+                    "start": 9.44,
+                    "end": 9.96,
+                    "word": " pretty...",
+                    "probability": 0.5313720703125
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Hi. I don't know what to do with this system. I'm pretty..."
+}

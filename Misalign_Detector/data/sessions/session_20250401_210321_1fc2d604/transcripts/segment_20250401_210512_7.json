@@ -1,0 +1,366 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 0.0,
+            "end": 2.36,
+            "text": " Well, I was... did I call this meeting?",
+            "tokens": [
+                50364,
+                1042,
+                11,
+                286,
+                390,
+                485,
+                630,
+                286,
+                818,
+                341,
+                3440,
+                30,
+                50493
+            ],
+            "avg_logprob": -0.7308467972663141,
+            "compression_ratio": 1.4586466165413534,
+            "no_speech_prob": 0.406982421875,
+            "words": [
+                {
+                    "start": 0.0,
+                    "end": 0.44,
+                    "word": " Well,",
+                    "probability": 0.283203125
+                },
+                {
+                    "start": 0.58,
+                    "end": 0.58,
+                    "word": " I",
+                    "probability": 0.85986328125
+                },
+                {
+                    "start": 0.58,
+                    "end": 1.28,
+                    "word": " was...",
+                    "probability": 0.52880859375
+                },
+                {
+                    "start": 1.28,
+                    "end": 1.42,
+                    "word": " did",
+                    "probability": 0.278564453125
+                },
+                {
+                    "start": 1.42,
+                    "end": 1.58,
+                    "word": " I",
+                    "probability": 0.953125
+                },
+                {
+                    "start": 1.58,
+                    "end": 1.86,
+                    "word": " call",
+                    "probability": 0.5634765625
+                },
+                {
+                    "start": 1.86,
+                    "end": 2.08,
+                    "word": " this",
+                    "probability": 0.91796875
+                },
+                {
+                    "start": 2.08,
+                    "end": 2.36,
+                    "word": " meeting?",
+                    "probability": 0.1524658203125
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 3.04,
+            "end": 5.86,
+            "text": " This is not a meeting because I spent the night like this.",
+            "tokens": [
+                50518,
+                639,
+                307,
+                406,
+                257,
+                3440,
+                570,
+                286,
+                4418,
+                264,
+                1818,
+                411,
+                341,
+                13,
+                50668
+            ],
+            "avg_logprob": -0.7308467972663141,
+            "compression_ratio": 1.4586466165413534,
+            "no_speech_prob": 0.406982421875,
+            "words": [
+                {
+                    "start": 3.04,
+                    "end": 3.22,
+                    "word": " This",
+                    "probability": 0.595703125
+                },
+                {
+                    "start": 3.22,
+                    "end": 3.42,
+                    "word": " is",
+                    "probability": 0.9658203125
+                },
+                {
+                    "start": 3.42,
+                    "end": 3.68,
+                    "word": " not",
+                    "probability": 0.61474609375
+                },
+                {
+                    "start": 3.68,
+                    "end": 3.78,
+                    "word": " a",
+                    "probability": 0.20068359375
+                },
+                {
+                    "start": 3.78,
+                    "end": 4.24,
+                    "word": " meeting",
+                    "probability": 0.81298828125
+                },
+                {
+                    "start": 4.24,
+                    "end": 4.56,
+                    "word": " because",
+                    "probability": 0.452392578125
+                },
+                {
+                    "start": 4.56,
+                    "end": 4.68,
+                    "word": " I",
+                    "probability": 0.5205078125
+                },
+                {
+                    "start": 4.68,
+                    "end": 4.8,
+                    "word": " spent",
+                    "probability": 0.06427001953125
+                },
+                {
+                    "start": 4.8,
+                    "end": 5.04,
+                    "word": " the",
+                    "probability": 0.337646484375
+                },
+                {
+                    "start": 5.04,
+                    "end": 5.34,
+                    "word": " night",
+                    "probability": 0.409423828125
+                },
+                {
+                    "start": 5.34,
+                    "end": 5.62,
+                    "word": " like",
+                    "probability": 0.1522216796875
+                },
+                {
+                    "start": 5.62,
+                    "end": 5.86,
+                    "word": " this.",
+                    "probability": 0.986328125
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 3,
+            "seek": 0,
+            "start": 6.42,
+            "end": 6.66,
+            "text": " Yeah.",
+            "tokens": [
+                50668,
+                865,
+                13,
+                50693
+            ],
+            "avg_logprob": -0.7308467972663141,
+            "compression_ratio": 1.4586466165413534,
+            "no_speech_prob": 0.406982421875,
+            "words": [
+                {
+                    "start": 6.42,
+                    "end": 6.66,
+                    "word": " Yeah.",
+                    "probability": 0.52197265625
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 4,
+            "seek": 0,
+            "start": 6.78,
+            "end": 8.94,
+            "text": " And we were like, how are you going to spend the night like this?",
+            "tokens": [
+                50693,
+                400,
+                321,
+                645,
+                411,
+                11,
+                577,
+                366,
+                291,
+                516,
+                281,
+                3496,
+                264,
+                1818,
+                411,
+                341,
+                30,
+                50843
+            ],
+            "avg_logprob": -0.7308467972663141,
+            "compression_ratio": 1.4586466165413534,
+            "no_speech_prob": 0.406982421875,
+            "words": [
+                {
+                    "start": 6.78,
+                    "end": 6.96,
+                    "word": " And",
+                    "probability": 0.07537841796875
+                },
+                {
+                    "start": 6.96,
+                    "end": 7.16,
+                    "word": " we",
+                    "probability": 0.1929931640625
+                },
+                {
+                    "start": 7.16,
+                    "end": 7.32,
+                    "word": " were",
+                    "probability": 0.80615234375
+                },
+                {
+                    "start": 7.32,
+                    "end": 7.48,
+                    "word": " like,",
+                    "probability": 0.7548828125
+                },
+                {
+                    "start": 7.64,
+                    "end": 7.82,
+                    "word": " how",
+                    "probability": 0.0180511474609375
+                },
+                {
+                    "start": 7.82,
+                    "end": 7.86,
+                    "word": " are",
+                    "probability": 0.49169921875
+                },
+                {
+                    "start": 7.86,
+                    "end": 7.98,
+                    "word": " you",
+                    "probability": 0.80322265625
+                },
+                {
+                    "start": 7.98,
+                    "end": 8.1,
+                    "word": " going",
+                    "probability": 0.403564453125
+                },
+                {
+                    "start": 8.1,
+                    "end": 8.24,
+                    "word": " to",
+                    "probability": 0.94384765625
+                },
+                {
+                    "start": 8.24,
+                    "end": 8.42,
+                    "word": " spend",
+                    "probability": 0.33251953125
+                },
+                {
+                    "start": 8.42,
+                    "end": 8.74,
+                    "word": " the",
+                    "probability": 0.57470703125
+                },
+                {
+                    "start": 8.74,
+                    "end": 8.84,
+                    "word": " night",
+                    "probability": 0.91748046875
+                },
+                {
+                    "start": 8.84,
+                    "end": 8.94,
+                    "word": " like",
+                    "probability": 0.20068359375
+                },
+                {
+                    "start": 8.94,
+                    "end": 8.94,
+                    "word": " this?",
+                    "probability": 0.720703125
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 5,
+            "seek": 0,
+            "start": 9.52,
+            "end": 9.98,
+            "text": " Yeah, I was...",
+            "tokens": [
+                50843,
+                865,
+                11,
+                286,
+                390,
+                485,
+                50868
+            ],
+            "avg_logprob": -0.7308467972663141,
+            "compression_ratio": 1.4586466165413534,
+            "no_speech_prob": 0.406982421875,
+            "words": [
+                {
+                    "start": 9.52,
+                    "end": 9.82,
+                    "word": " Yeah,",
+                    "probability": 0.83203125
+                },
+                {
+                    "start": 9.88,
+                    "end": 9.98,
+                    "word": " I",
+                    "probability": 0.9384765625
+                },
+                {
+                    "start": 9.98,
+                    "end": 9.98,
+                    "word": " was...",
+                    "probability": 0.88720703125
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Well, I was... did I call this meeting? This is not a meeting because I spent the night like this. Yeah. And we were like, how are you going to spend the night like this? Yeah, I was..."
+}

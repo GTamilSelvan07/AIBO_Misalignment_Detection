@@ -1,0 +1,11 @@
+{
+  "misalignment_detected": true,
+  "misalignment_scores": {
+    "participant1": 0.8,
+    "participant2": 0.2
+  },
+  "cause": "The conversation is largely a passive, somewhat detached exchange. There's a noticeable lack of proactive engagement or clarification. The user expresses frustration and a desire for a more structured process, suggesting a potential misalignment with the current flow of communication. The user's statement 'This is not a meeting because I spent the night like this' indicates a disconnect between the stated purpose and the actual experience.",
+  "recommendation": "Start with a brief, focused recap of the goals and expectations of the meeting. Ask clarifying questions to ensure everyone is on the same page. Introduce a structured agenda with defined roles and responsibilities to minimize ambiguity and potential misunderstandings.",
+  "timestamp": 1743494746.3495476,
+  "transcript": "I am pretty sure that the system can detect all the stuff that we need to do, but we are not sure how to do that. Can we just...tch...things? Hi, I'm not sure. This is frustrating. How can I do the system-vary things? Hm, this is sad. Well, I was... did I call this meeting? This is not a meeting because I spent the night like this. Yeah. And we were like, how are you going to spend the night like this? Yeah, I was... I agree. I agree. Brace yourself. This is the second sentence. Okay. This is the second sentence. Please."
+}

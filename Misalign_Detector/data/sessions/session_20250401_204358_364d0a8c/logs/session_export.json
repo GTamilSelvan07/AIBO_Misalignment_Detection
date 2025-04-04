@@ -1,0 +1,407 @@
+{
+  "metadata": {
+    "session_id": "session_20250401_204358_364d0a8c",
+    "start_time": "2025-04-01 20:44:13.915",
+    "participants": [
+      "participant1",
+      "participant2"
+    ],
+    "end_time": "2025-04-01 20:45:24.679",
+    "total_duration": 70.764,
+    "misalignment_summary": {
+      "average_score": 0.0,
+      "peak_score": 0.0,
+      "duration_above_threshold": 0.0
+    }
+  },
+  "logs": {
+    "csv_path": "logs\\misalignment_scores.csv",
+    "json_path": "logs\\session_log.json"
+  },
+  "files": {
+    "video": [
+      "video\\participant1.avi",
+      "video\\participant2.avi"
+    ],
+    "audio": [
+      "audio\\segment_20250401_204442_0.wav",
+      "audio\\segment_20250401_204452_1.wav",
+      "audio\\segment_20250401_204502_2.wav",
+      "audio\\segment_20250401_204512_3.wav",
+      "audio\\segment_20250401_204523_4.wav"
+    ],
+    "transcripts": [
+      "transcripts\\segment_20250401_204442_0.json",
+      "transcripts\\segment_20250401_204452_1.json",
+      "transcripts\\segment_20250401_204502_2.json",
+      "transcripts\\segment_20250401_204512_3.json"
+    ],
+    "features": [
+      "features\\participant1\\participant1_features.csv",
+      "features\\participant2\\participant2_features.csv"
+    ],
+    "analysis": []
+  },
+  "summary": {
+    "misalignment_score_history": [
+      {
+        "timestamp": "2025-04-01 20:44:33.775",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:34.784",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:35.790",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:36.798",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:37.804",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:38.810",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:39.815",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:40.325",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:41.842",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:42.350",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:43.357",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:44.368",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:45.377",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:46.896",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:47.903",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:48.913",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:49.931",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:50.939",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:51.944",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:52.951",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:53.958",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:54.967",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:55.974",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:56.981",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:57.991",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:44:59.008",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:00.013",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:01.020",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:02.029",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:03.036",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:04.043",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:05.058",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:06.068",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:07.073",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:08.081",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:09.092",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:10.100",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:11.113",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:12.119",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:13.124",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:14.135",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:15.150",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:16.158",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:17.163",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:18.168",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:19.174",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:20.180",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:21.188",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:22.194",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:23.200",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      },
+      {
+        "timestamp": "2025-04-01 20:45:24.207",
+        "scores": {
+          "participant1": 0.0,
+          "participant2": 0.0
+        }
+      }
+    ],
+    "transcript_highlights": []
+  }
+}

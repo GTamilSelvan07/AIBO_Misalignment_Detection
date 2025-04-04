@@ -1,0 +1,154 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 2.75,
+            "end": 6.91,
+            "text": " Q. Shabonimu, it's a very important subject.",
+            "tokens": [
+                50364,
+                1249,
+                13,
+                1160,
+                455,
+                266,
+                332,
+                84,
+                11,
+                309,
+                311,
+                257,
+                588,
+                1021,
+                3983,
+                13,
+                50589
+            ],
+            "avg_logprob": -1.56848310201596,
+            "compression_ratio": 1.540983606557377,
+            "no_speech_prob": 0.5546875,
+            "words": [
+                {
+                    "start": 2.75,
+                    "end": 3.57,
+                    "word": " Q.",
+                    "probability": 0.0006413459777832031
+                },
+                {
+                    "start": 4.61,
+                    "end": 5.33,
+                    "word": " Shabonimu,",
+                    "probability": 0.06542761325836181
+                },
+                {
+                    "start": 5.33,
+                    "end": 6.75,
+                    "word": " it's",
+                    "probability": 0.2356433868408203
+                },
+                {
+                    "start": 6.75,
+                    "end": 6.89,
+                    "word": " a",
+                    "probability": 0.1824951171875
+                },
+                {
+                    "start": 6.89,
+                    "end": 6.91,
+                    "word": " very",
+                    "probability": 0.05609130859375
+                },
+                {
+                    "start": 6.91,
+                    "end": 6.91,
+                    "word": " important",
+                    "probability": 0.0711669921875
+                },
+                {
+                    "start": 6.91,
+                    "end": 6.91,
+                    "word": " subject.",
+                    "probability": 0.005908966064453125
+                }
+            ],
+            "temperature": 1.0
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 7.79,
+            "end": 9.25,
+            "text": " Q. Shabonimu, it's a very important subject.",
+            "tokens": [
+                50639,
+                1249,
+                13,
+                1160,
+                455,
+                266,
+                332,
+                84,
+                11,
+                309,
+                311,
+                257,
+                588,
+                1021,
+                3983,
+                13,
+                50739
+            ],
+            "avg_logprob": -1.56848310201596,
+            "compression_ratio": 1.540983606557377,
+            "no_speech_prob": 0.5546875,
+            "words": [
+                {
+                    "start": 7.79,
+                    "end": 8.29,
+                    "word": " Q.",
+                    "probability": 0.216796875
+                },
+                {
+                    "start": 8.41,
+                    "end": 8.79,
+                    "word": " Shabonimu,",
+                    "probability": 0.850927734375
+                },
+                {
+                    "start": 8.79,
+                    "end": 8.79,
+                    "word": " it's",
+                    "probability": 0.7109375
+                },
+                {
+                    "start": 8.79,
+                    "end": 8.79,
+                    "word": " a",
+                    "probability": 0.8505859375
+                },
+                {
+                    "start": 8.79,
+                    "end": 8.79,
+                    "word": " very",
+                    "probability": 0.82958984375
+                },
+                {
+                    "start": 8.79,
+                    "end": 9.25,
+                    "word": " important",
+                    "probability": 0.94384765625
+                },
+                {
+                    "start": 9.25,
+                    "end": 9.25,
+                    "word": " subject.",
+                    "probability": 0.9482421875
+                }
+            ],
+            "temperature": 1.0
+        }
+    ],
+    "language": "en",
+    "text": " Q. Shabonimu, it's a very important subject. Q. Shabonimu, it's a very important subject."
+}

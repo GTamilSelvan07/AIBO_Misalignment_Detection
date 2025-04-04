@@ -1,0 +1,18 @@
+{
+  "timestamp": 1743738377.3252294,
+  "formatted_time": "2025-04-04 16:46:17.325",
+  "facial_scores": {
+    "participant1": 0.0,
+    "participant2": 0.0
+  },
+  "llm_scores": {
+    "participant1": 0.0,
+    "participant2": 0.0
+  },
+  "combined_scores": {
+    "participant2": 0.0,
+    "participant1": 0.0
+  },
+  "misalignment_detected": false,
+  "transcript": "Hello. Hi. This is very time consuming. I don't know what to do."
+}

@@ -1,0 +1,16 @@
+2025-04-01 20:42:33,679 - ui.main_app - INFO - Misalignment Detection Application started
+2025-04-01 20:42:33,681 - ui.main_app - INFO - Created new session: session_20250401_204233_6f82717d
+2025-04-01 20:42:43,650 - numexpr.utils - INFO - Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2025-04-01 20:42:43,650 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-04-01 20:42:44,415 - ui.main_app - ERROR - Exception: cannot import name 'DataLogger' from 'core.data_logger' (C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\core\data_logger.py) | Additional Info: Error starting detection
+2025-04-01 20:42:44,415 - ui.main_app - ERROR - Traceback (most recent call last):
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\ui\main_app.py", line 301, in start_detection
+    from core.data_logger import DataLogger
+ImportError: cannot import name 'DataLogger' from 'core.data_logger' (C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\core\data_logger.py)
+
+2025-04-01 20:43:17,582 - ui.main_app - ERROR - Exception: cannot import name 'DataLogger' from 'core.data_logger' (C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\core\data_logger.py) | Additional Info: Error starting detection
+2025-04-01 20:43:17,583 - ui.main_app - ERROR - Traceback (most recent call last):
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\ui\main_app.py", line 301, in start_detection
+    from core.data_logger import DataLogger
+ImportError: cannot import name 'DataLogger' from 'core.data_logger' (C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\core\data_logger.py)
+

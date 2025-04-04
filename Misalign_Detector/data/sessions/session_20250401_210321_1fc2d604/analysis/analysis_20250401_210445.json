@@ -1,0 +1,11 @@
+{
+  "misalignment_detected": true,
+  "misalignment_scores": {
+    "participant1": 0.8,
+    "participant2": 0.2
+  },
+  "cause": "The participant expresses significant confusion and frustration regarding the system's capabilities and how to utilize it effectively. They are clearly struggling with the system's functionality and are seeking guidance on how to proceed.",
+  "recommendation": "Offer a clear, step-by-step guide on how to utilize the system effectively. Start with a simple task and gradually introduce more complex functionalities. Acknowledge their frustration and reassure them that the system can detect the necessary things, but requires a focused approach to understanding it.",
+  "timestamp": 1743494685.839014,
+  "transcript": "Hi. I don't know what to do with this system. I'm pretty... Cool about this. Can we do something that is very good at this? This is frustrating. What to do? I am pretty sure that the system can detect all the stuff that we need to do, but we are not sure how to do that. Can we just...tch...things? Hi, I'm not sure. This is frustrating. How can I do the system-vary things?"
+}

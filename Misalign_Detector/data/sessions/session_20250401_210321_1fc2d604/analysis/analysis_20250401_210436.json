@@ -1,0 +1,11 @@
+{
+  "misalignment_detected": true,
+  "misalignment_scores": {
+    "participant1": 0.7,
+    "participant2": 0.3
+  },
+  "cause": "The participant expresses frustration and uncertainty about a system, indicating a lack of understanding of the system's capabilities and a potential need for guidance. The statement 'I am pretty sure that the system can detect all the stuff that we need to do' suggests a belief that the system is capable of handling the task, but the lack of specific details or a clear request for assistance points to a potential misalignment.",
+  "recommendation": "Start by asking the participant to provide more context about the system and the task they are attempting. Offer a specific, actionable step to help them understand the system better. Perhaps a brief walkthrough or a question like 'Can you tell me what you're trying to achieve?' would be beneficial.",
+  "timestamp": 1743494676.1569781,
+  "transcript": "Hi. I don't know what to do with this system. I'm pretty... Cool about this. Can we do something that is very good at this? This is frustrating. What to do? I am pretty sure that the system can detect all the stuff that we need to do, but we are not sure how to do that."
+}

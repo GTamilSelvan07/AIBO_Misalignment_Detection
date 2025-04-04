@@ -1,0 +1,23 @@
+{
+  "timestamp": 1743494733.0703619,
+  "formatted_time": "2025-04-01 21:05:33.070",
+  "facial_scores": {
+    "participant1": 0.0,
+    "participant2": 0.0
+  },
+  "llm_scores": {
+    "participant1": 0.8,
+    "participant2": 0.2
+  },
+  "combined_scores": {
+    "participant2": 0.12,
+    "participant1": 0.48
+  },
+  "misalignment_detected": false,
+  "transcript": "Cool about this. Can we do something that is very good at this? This is frustrating. What to do? I am pretty sure that the system can detect all the stuff that we need to do, but we are not sure how to do that. Can we just...tch...things? Hi, I'm not sure. This is frustrating. How can I do the system-vary things? Hm, this is sad. Well, I was... did I call this meeting? This is not a meeting because I spent the night like this. Yeah. And we were like, how are you going to spend the night like this? Yeah, I was...",
+  "llm_analysis": {
+    "misalignment_detected": true,
+    "cause": "The conversation is riddled with subtle but significant shifts in topic and tone. Participant 1 frequently interrupts and shifts the conversation to unrelated matters, while Participant 2 seems to be struggling to keep up with the flow and occasionally provides irrelevant or confusing responses. There's a noticeable lack of shared understanding and a potential for misinterpretation of each other's intentions.",
+    "recommendation": "Implement a brief pause before responding, actively solicit clarification from each participant, and ensure a clear understanding of the conversation's purpose before proceeding. Perhaps a quick recap of the previous points would be beneficial."
+  }
+}

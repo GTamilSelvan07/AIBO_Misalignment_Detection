@@ -1,0 +1,111 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 4.28,
+            "end": 9.6,
+            "text": " Hi. This is very time consuming. I don't know what to do.",
+            "tokens": [
+                50364,
+                2421,
+                13,
+                639,
+                307,
+                588,
+                565,
+                19867,
+                13,
+                286,
+                500,
+                380,
+                458,
+                437,
+                281,
+                360,
+                13,
+                50664
+            ],
+            "avg_logprob": -0.3318256484834771,
+            "compression_ratio": 0.9193548387096774,
+            "no_speech_prob": 0.2109375,
+            "words": [
+                {
+                    "start": 4.28,
+                    "end": 5.3,
+                    "word": " Hi.",
+                    "probability": 0.5849609375
+                },
+                {
+                    "start": 5.92,
+                    "end": 6.52,
+                    "word": " This",
+                    "probability": 0.8974609375
+                },
+                {
+                    "start": 6.52,
+                    "end": 6.7,
+                    "word": " is",
+                    "probability": 0.705078125
+                },
+                {
+                    "start": 6.7,
+                    "end": 7.18,
+                    "word": " very",
+                    "probability": 0.9189453125
+                },
+                {
+                    "start": 7.18,
+                    "end": 7.68,
+                    "word": " time",
+                    "probability": 0.818359375
+                },
+                {
+                    "start": 7.68,
+                    "end": 8.18,
+                    "word": " consuming.",
+                    "probability": 0.908203125
+                },
+                {
+                    "start": 8.52,
+                    "end": 8.62,
+                    "word": " I",
+                    "probability": 0.98583984375
+                },
+                {
+                    "start": 8.62,
+                    "end": 8.92,
+                    "word": " don't",
+                    "probability": 0.97998046875
+                },
+                {
+                    "start": 8.92,
+                    "end": 8.98,
+                    "word": " know",
+                    "probability": 0.9931640625
+                },
+                {
+                    "start": 8.98,
+                    "end": 9.22,
+                    "word": " what",
+                    "probability": 0.9912109375
+                },
+                {
+                    "start": 9.22,
+                    "end": 9.4,
+                    "word": " to",
+                    "probability": 0.99560546875
+                },
+                {
+                    "start": 9.4,
+                    "end": 9.6,
+                    "word": " do.",
+                    "probability": 0.99853515625
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Hi. This is very time consuming. I don't know what to do."
+}

@@ -1,0 +1,207 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 1.21,
+            "end": 9.85,
+            "text": " I am pretty sure that the system can detect all the stuff that we need to do, but we are not sure how to do that.",
+            "tokens": [
+                50364,
+                286,
+                669,
+                1238,
+                988,
+                300,
+                264,
+                1185,
+                393,
+                5531,
+                439,
+                264,
+                1507,
+                300,
+                321,
+                643,
+                281,
+                360,
+                11,
+                457,
+                321,
+                366,
+                406,
+                988,
+                577,
+                281,
+                360,
+                300,
+                13,
+                50864
+            ],
+            "avg_logprob": -0.21912802611627885,
+            "compression_ratio": 1.313953488372093,
+            "no_speech_prob": 0.07562255859375,
+            "words": [
+                {
+                    "start": 1.21,
+                    "end": 1.69,
+                    "word": " I",
+                    "probability": 0.77490234375
+                },
+                {
+                    "start": 1.69,
+                    "end": 1.91,
+                    "word": " am",
+                    "probability": 0.7294921875
+                },
+                {
+                    "start": 1.91,
+                    "end": 2.47,
+                    "word": " pretty",
+                    "probability": 0.7861328125
+                },
+                {
+                    "start": 2.47,
+                    "end": 2.73,
+                    "word": " sure",
+                    "probability": 0.9990234375
+                },
+                {
+                    "start": 2.73,
+                    "end": 2.99,
+                    "word": " that",
+                    "probability": 0.951171875
+                },
+                {
+                    "start": 2.99,
+                    "end": 3.17,
+                    "word": " the",
+                    "probability": 0.73046875
+                },
+                {
+                    "start": 3.17,
+                    "end": 3.51,
+                    "word": " system",
+                    "probability": 0.9931640625
+                },
+                {
+                    "start": 3.51,
+                    "end": 3.83,
+                    "word": " can",
+                    "probability": 0.96630859375
+                },
+                {
+                    "start": 3.83,
+                    "end": 4.35,
+                    "word": " detect",
+                    "probability": 0.97998046875
+                },
+                {
+                    "start": 4.35,
+                    "end": 4.71,
+                    "word": " all",
+                    "probability": 0.9873046875
+                },
+                {
+                    "start": 4.71,
+                    "end": 4.91,
+                    "word": " the",
+                    "probability": 0.95654296875
+                },
+                {
+                    "start": 4.91,
+                    "end": 6.47,
+                    "word": " stuff",
+                    "probability": 0.7705078125
+                },
+                {
+                    "start": 6.47,
+                    "end": 6.77,
+                    "word": " that",
+                    "probability": 0.93212890625
+                },
+                {
+                    "start": 6.77,
+                    "end": 6.97,
+                    "word": " we",
+                    "probability": 0.9912109375
+                },
+                {
+                    "start": 6.97,
+                    "end": 7.19,
+                    "word": " need",
+                    "probability": 0.9931640625
+                },
+                {
+                    "start": 7.19,
+                    "end": 7.37,
+                    "word": " to",
+                    "probability": 0.998046875
+                },
+                {
+                    "start": 7.37,
+                    "end": 7.61,
+                    "word": " do,",
+                    "probability": 0.99609375
+                },
+                {
+                    "start": 7.95,
+                    "end": 8.33,
+                    "word": " but",
+                    "probability": 0.97998046875
+                },
+                {
+                    "start": 8.33,
+                    "end": 8.49,
+                    "word": " we",
+                    "probability": 0.97998046875
+                },
+                {
+                    "start": 8.49,
+                    "end": 8.57,
+                    "word": " are",
+                    "probability": 0.87744140625
+                },
+                {
+                    "start": 8.57,
+                    "end": 8.73,
+                    "word": " not",
+                    "probability": 0.99365234375
+                },
+                {
+                    "start": 8.73,
+                    "end": 8.99,
+                    "word": " sure",
+                    "probability": 0.990234375
+                },
+                {
+                    "start": 8.99,
+                    "end": 9.23,
+                    "word": " how",
+                    "probability": 0.98388671875
+                },
+                {
+                    "start": 9.23,
+                    "end": 9.41,
+                    "word": " to",
+                    "probability": 0.99658203125
+                },
+                {
+                    "start": 9.41,
+                    "end": 9.61,
+                    "word": " do",
+                    "probability": 0.9970703125
+                },
+                {
+                    "start": 9.61,
+                    "end": 9.85,
+                    "word": " that.",
+                    "probability": 0.99658203125
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " I am pretty sure that the system can detect all the stuff that we need to do, but we are not sure how to do that."
+}

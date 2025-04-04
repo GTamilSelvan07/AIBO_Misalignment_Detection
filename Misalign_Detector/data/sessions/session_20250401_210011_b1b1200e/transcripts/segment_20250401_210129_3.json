@@ -1,0 +1,112 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 2.39,
+            "end": 9.23,
+            "text": " Hmm, what to do? Oh no, this is a bad thing. Hi.",
+            "tokens": [
+                50364,
+                8239,
+                11,
+                437,
+                281,
+                360,
+                30,
+                876,
+                572,
+                11,
+                341,
+                307,
+                257,
+                1578,
+                551,
+                13,
+                2421,
+                13,
+                50764
+            ],
+            "avg_logprob": -0.4976562768220901,
+            "compression_ratio": 0.9230769230769231,
+            "no_speech_prob": 0.059539794921875,
+            "words": [
+                {
+                    "start": 2.39,
+                    "end": 2.95,
+                    "word": " Hmm,",
+                    "probability": 0.1888427734375
+                },
+                {
+                    "start": 3.45,
+                    "end": 3.73,
+                    "word": " what",
+                    "probability": 0.814453125
+                },
+                {
+                    "start": 3.73,
+                    "end": 3.91,
+                    "word": " to",
+                    "probability": 0.97900390625
+                },
+                {
+                    "start": 3.91,
+                    "end": 4.15,
+                    "word": " do?",
+                    "probability": 0.99853515625
+                },
+                {
+                    "start": 5.87,
+                    "end": 6.43,
+                    "word": " Oh",
+                    "probability": 0.92236328125
+                },
+                {
+                    "start": 6.43,
+                    "end": 6.61,
+                    "word": " no,",
+                    "probability": 0.74951171875
+                },
+                {
+                    "start": 6.83,
+                    "end": 6.99,
+                    "word": " this",
+                    "probability": 0.98046875
+                },
+                {
+                    "start": 6.99,
+                    "end": 7.19,
+                    "word": " is",
+                    "probability": 0.99267578125
+                },
+                {
+                    "start": 7.19,
+                    "end": 7.39,
+                    "word": " a",
+                    "probability": 0.9404296875
+                },
+                {
+                    "start": 7.39,
+                    "end": 7.55,
+                    "word": " bad",
+                    "probability": 0.9892578125
+                },
+                {
+                    "start": 7.55,
+                    "end": 7.89,
+                    "word": " thing.",
+                    "probability": 0.99560546875
+                },
+                {
+                    "start": 8.71,
+                    "end": 9.23,
+                    "word": " Hi.",
+                    "probability": 0.70263671875
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Hmm, what to do? Oh no, this is a bad thing. Hi."
+}

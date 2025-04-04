@@ -1,0 +1,177 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 0.0,
+            "end": 4.78,
+            "text": " Cool about this. Can we do something that is very good at this?",
+            "tokens": [
+                50364,
+                8561,
+                466,
+                341,
+                13,
+                1664,
+                321,
+                360,
+                746,
+                300,
+                307,
+                588,
+                665,
+                412,
+                341,
+                30,
+                50614
+            ],
+            "avg_logprob": -0.30803571747882025,
+            "compression_ratio": 1.103448275862069,
+            "no_speech_prob": 0.09832763671875,
+            "words": [
+                {
+                    "start": 0.0,
+                    "end": 0.46,
+                    "word": " Cool",
+                    "probability": 0.2293701171875
+                },
+                {
+                    "start": 0.46,
+                    "end": 0.74,
+                    "word": " about",
+                    "probability": 0.94091796875
+                },
+                {
+                    "start": 0.74,
+                    "end": 1.18,
+                    "word": " this.",
+                    "probability": 0.99072265625
+                },
+                {
+                    "start": 1.58,
+                    "end": 1.86,
+                    "word": " Can",
+                    "probability": 0.9638671875
+                },
+                {
+                    "start": 1.86,
+                    "end": 2.02,
+                    "word": " we",
+                    "probability": 0.9794921875
+                },
+                {
+                    "start": 2.02,
+                    "end": 2.22,
+                    "word": " do",
+                    "probability": 0.998046875
+                },
+                {
+                    "start": 2.22,
+                    "end": 2.58,
+                    "word": " something",
+                    "probability": 0.99560546875
+                },
+                {
+                    "start": 2.58,
+                    "end": 2.98,
+                    "word": " that",
+                    "probability": 0.982421875
+                },
+                {
+                    "start": 2.98,
+                    "end": 3.26,
+                    "word": " is",
+                    "probability": 0.9814453125
+                },
+                {
+                    "start": 3.26,
+                    "end": 3.98,
+                    "word": " very",
+                    "probability": 0.96337890625
+                },
+                {
+                    "start": 3.98,
+                    "end": 4.24,
+                    "word": " good",
+                    "probability": 0.99462890625
+                },
+                {
+                    "start": 4.24,
+                    "end": 4.48,
+                    "word": " at",
+                    "probability": 0.97021484375
+                },
+                {
+                    "start": 4.48,
+                    "end": 4.78,
+                    "word": " this?",
+                    "probability": 0.97021484375
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 5.78,
+            "end": 9.86,
+            "text": " This is frustrating. What to do?",
+            "tokens": [
+                50664,
+                639,
+                307,
+                16522,
+                13,
+                708,
+                281,
+                360,
+                30,
+                50864
+            ],
+            "avg_logprob": -0.30803571747882025,
+            "compression_ratio": 1.103448275862069,
+            "no_speech_prob": 0.09832763671875,
+            "words": [
+                {
+                    "start": 5.78,
+                    "end": 6.24,
+                    "word": " This",
+                    "probability": 0.5263671875
+                },
+                {
+                    "start": 6.24,
+                    "end": 6.74,
+                    "word": " is",
+                    "probability": 0.99658203125
+                },
+                {
+                    "start": 6.74,
+                    "end": 7.38,
+                    "word": " frustrating.",
+                    "probability": 0.97900390625
+                },
+                {
+                    "start": 8.76,
+                    "end": 9.48,
+                    "word": " What",
+                    "probability": 0.60205078125
+                },
+                {
+                    "start": 9.48,
+                    "end": 9.72,
+                    "word": " to",
+                    "probability": 0.9873046875
+                },
+                {
+                    "start": 9.72,
+                    "end": 9.86,
+                    "word": " do?",
+                    "probability": 0.998046875
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Cool about this. Can we do something that is very good at this? This is frustrating. What to do?"
+}

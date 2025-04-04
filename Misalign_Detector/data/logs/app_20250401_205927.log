@@ -1,0 +1,10 @@
+2025-04-01 20:59:29,012 - __main__ - ERROR - Exception: 'MisalignmentApp' object has no attribute '_setup_styles' | Additional Info: Error in main function
+2025-04-01 20:59:29,013 - __main__ - ERROR - Traceback (most recent call last):
+  File "c:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\main.py", line 158, in main
+    run_app()
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\ui\main_app.py", line 582, in run_app
+    app = MisalignmentApp(root)
+  File "C:\Users\tg469\Projects\PhD_Projects\AIBO\Dev\Misalign_Detector\ui\main_app.py", line 40, in __init__
+    self._setup_styles()
+AttributeError: 'MisalignmentApp' object has no attribute '_setup_styles'
+

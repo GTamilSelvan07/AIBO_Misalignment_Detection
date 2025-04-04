@@ -1,0 +1,67 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 4.12,
+            "end": 6.64,
+            "text": " Okay, should I just do that?",
+            "tokens": [
+                50364,
+                1033,
+                11,
+                820,
+                286,
+                445,
+                360,
+                300,
+                30,
+                50614
+            ],
+            "avg_logprob": -0.49822444265538995,
+            "compression_ratio": 0.7777777777777778,
+            "no_speech_prob": 0.377197265625,
+            "words": [
+                {
+                    "start": 4.12,
+                    "end": 4.76,
+                    "word": " Okay,",
+                    "probability": 0.303955078125
+                },
+                {
+                    "start": 4.88,
+                    "end": 5.36,
+                    "word": " should",
+                    "probability": 0.88623046875
+                },
+                {
+                    "start": 5.36,
+                    "end": 5.62,
+                    "word": " I",
+                    "probability": 0.93701171875
+                },
+                {
+                    "start": 5.62,
+                    "end": 6.06,
+                    "word": " just",
+                    "probability": 0.9658203125
+                },
+                {
+                    "start": 6.06,
+                    "end": 6.34,
+                    "word": " do",
+                    "probability": 0.99560546875
+                },
+                {
+                    "start": 6.34,
+                    "end": 6.64,
+                    "word": " that?",
+                    "probability": 0.998046875
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Okay, should I just do that?"
+}

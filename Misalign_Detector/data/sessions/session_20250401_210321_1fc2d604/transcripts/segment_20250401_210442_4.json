@@ -1,0 +1,53 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 1.7,
+            "end": 4.22,
+            "text": " Hm, this is sad.",
+            "tokens": [
+                50364,
+                17989,
+                11,
+                341,
+                307,
+                4227,
+                13,
+                50614
+            ],
+            "avg_logprob": -0.7925347222222222,
+            "compression_ratio": 0.7272727272727273,
+            "no_speech_prob": 0.03076171875,
+            "words": [
+                {
+                    "start": 1.7,
+                    "end": 2.32,
+                    "word": " Hm,",
+                    "probability": 0.059661865234375
+                },
+                {
+                    "start": 3.5,
+                    "end": 3.72,
+                    "word": " this",
+                    "probability": 0.489501953125
+                },
+                {
+                    "start": 3.72,
+                    "end": 3.94,
+                    "word": " is",
+                    "probability": 0.994140625
+                },
+                {
+                    "start": 3.94,
+                    "end": 4.22,
+                    "word": " sad.",
+                    "probability": 0.98193359375
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Hm, this is sad."
+}

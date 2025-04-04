@@ -1,0 +1,11 @@
+{
+  "misalignment_detected": true,
+  "misalignment_scores": {
+    "participant1": 0.7,
+    "participant2": 0.3
+  },
+  "cause": "The participant expresses a feeling of being overwhelmed and unsure of what to do, indicating a lack of clarity regarding the task. Their initial statement 'I kind of regulated things' suggests a potential reluctance to actively engage with a decision-making process, which could be misinterpreted as a lack of understanding of the situation.",
+  "recommendation": "Perhaps offering a gentle nudge to clarify the specific task or asking a clarifying question like, 'Could you elaborate on what you're regulating?' would help bridge the gap.",
+  "timestamp": 1743738384.4214718,
+  "transcript": "Hello. Hi. This is very time consuming. I don't know what to do. I kind of regulated things, so I'm not sure, should I just do this or that."
+}

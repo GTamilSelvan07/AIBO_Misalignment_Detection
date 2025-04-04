@@ -1,0 +1,18 @@
+{
+  "timestamp": 1743494479.8450909,
+  "formatted_time": "2025-04-01 21:01:19.845",
+  "facial_scores": {
+    "participant1": 0.0,
+    "participant2": 0.0
+  },
+  "llm_scores": {
+    "participant1": 0.0,
+    "participant2": 0.0
+  },
+  "combined_scores": {
+    "participant2": 0.0,
+    "participant1": 0.0
+  },
+  "misalignment_detected": false,
+  "transcript": "Hi there, how are you doing? This is not the radio thing."
+}

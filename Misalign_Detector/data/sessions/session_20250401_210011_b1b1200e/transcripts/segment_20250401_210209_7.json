@@ -1,0 +1,38 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 8.8,
+            "end": 9.98,
+            "text": " Oh my...",
+            "tokens": [
+                50364,
+                876,
+                452,
+                485,
+                50464
+            ],
+            "avg_logprob": -0.4684244592984517,
+            "compression_ratio": 0.5,
+            "no_speech_prob": 0.56884765625,
+            "words": [
+                {
+                    "start": 8.8,
+                    "end": 9.84,
+                    "word": " Oh",
+                    "probability": 0.403564453125
+                },
+                {
+                    "start": 9.84,
+                    "end": 9.98,
+                    "word": " my...",
+                    "probability": 0.52801513671875
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " Oh my..."
+}

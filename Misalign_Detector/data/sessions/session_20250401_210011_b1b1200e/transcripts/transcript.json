@@ -1,0 +1,41 @@
+{
+  "segments": [
+    {
+      "timestamp": "2025-04-01 21:01:13.316",
+      "unix_timestamp": 1743494473.316497,
+      "audio_file": "segment_20250401_210109_1.wav",
+      "text": "Hi there, how are you doing? This is not the radio thing."
+    },
+    {
+      "timestamp": "2025-04-01 21:01:23.074",
+      "unix_timestamp": 1743494483.0747979,
+      "audio_file": "segment_20250401_210119_2.wav",
+      "text": "Hi, how are you doing? Oh no, this is not a bad thing though."
+    },
+    {
+      "timestamp": "2025-04-01 21:01:33.067",
+      "unix_timestamp": 1743494493.0670996,
+      "audio_file": "segment_20250401_210129_3.wav",
+      "text": "Hmm, what to do? Oh no, this is a bad thing. Hi."
+    },
+    {
+      "timestamp": "2025-04-01 21:01:43.175",
+      "unix_timestamp": 1743494503.1751606,
+      "audio_file": "segment_20250401_210139_4.wav",
+      "text": "Okay, should I just do that?"
+    },
+    {
+      "timestamp": "2025-04-01 21:02:03.089",
+      "unix_timestamp": 1743494523.089081,
+      "audio_file": "segment_20250401_210159_6.wav",
+      "text": "Oh my god, this is sad."
+    },
+    {
+      "timestamp": "2025-04-01 21:02:13.145",
+      "unix_timestamp": 1743494533.1459694,
+      "audio_file": "segment_20250401_210209_7.wav",
+      "text": "Oh my..."
+    }
+  ],
+  "updated_at": "2025-04-01 21:02:13.145"
+}

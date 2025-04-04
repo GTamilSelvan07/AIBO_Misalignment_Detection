@@ -1,0 +1,86 @@
+{
+    "segments": [
+        {
+            "id": 1,
+            "seek": 0,
+            "start": 0.64,
+            "end": 2.12,
+            "text": " What's going on?",
+            "tokens": [
+                50364,
+                708,
+                311,
+                516,
+                322,
+                30,
+                50464
+            ],
+            "avg_logprob": -0.8468750238418579,
+            "compression_ratio": 1.1785714285714286,
+            "no_speech_prob": 0.56689453125,
+            "words": [
+                {
+                    "start": 0.64,
+                    "end": 1.66,
+                    "word": " What's",
+                    "probability": 0.23901748657226562
+                },
+                {
+                    "start": 1.66,
+                    "end": 1.88,
+                    "word": " going",
+                    "probability": 0.237060546875
+                },
+                {
+                    "start": 1.88,
+                    "end": 2.12,
+                    "word": " on?",
+                    "probability": 0.94677734375
+                }
+            ],
+            "temperature": 0.0
+        },
+        {
+            "id": 2,
+            "seek": 0,
+            "start": 6.68,
+            "end": 8.02,
+            "text": " What's going on?",
+            "tokens": [
+                50464,
+                708,
+                311,
+                516,
+                322,
+                30,
+                50564
+            ],
+            "avg_logprob": -0.8468750238418579,
+            "compression_ratio": 1.1785714285714286,
+            "no_speech_prob": 0.56689453125,
+            "words": [
+                {
+                    "start": 6.68,
+                    "end": 7.42,
+                    "word": " What's",
+                    "probability": 0.568359375
+                },
+                {
+                    "start": 7.42,
+                    "end": 7.58,
+                    "word": " going",
+                    "probability": 0.74853515625
+                },
+                {
+                    "start": 7.58,
+                    "end": 8.02,
+                    "word": " on?",
+                    "probability": 0.97314453125
+                }
+            ],
+            "temperature": 0.0
+        }
+    ],
+    "language": "en",
+    "text": " What's going on? What's going on?"
+}

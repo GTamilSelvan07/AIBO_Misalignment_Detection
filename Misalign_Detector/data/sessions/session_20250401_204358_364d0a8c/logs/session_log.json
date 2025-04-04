@@ -1,0 +1,51 @@
+{
+  "session_id": "session_20250401_204358_364d0a8c",
+  "start_time": "2025-04-01 20:44:13.915",
+  "detections": [
+    {
+      "timestamp": 1743493480.3254657,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.0,
+        "participant1": 0.0
+      },
+      "cause": ""
+    },
+    {
+      "timestamp": 1743493490.9391663,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.0,
+        "participant1": 0.0
+      },
+      "cause": ""
+    },
+    {
+      "timestamp": 1743493500.0134366,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.0,
+        "participant1": 0.0
+      },
+      "cause": ""
+    },
+    {
+      "timestamp": 1743493510.1007724,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.0,
+        "participant1": 0.0
+      },
+      "cause": ""
+    },
+    {
+      "timestamp": 1743493520.1801956,
+      "misalignment_detected": false,
+      "combined_scores": {
+        "participant2": 0.0,
+        "participant1": 0.0
+      },
+      "cause": ""
+    }
+  ]
+}

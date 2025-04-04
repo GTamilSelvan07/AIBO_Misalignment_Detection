@@ -1,0 +1,11 @@
+{
+  "misalignment_detected": true,
+  "misalignment_scores": {
+    "participant1": 0.7,
+    "participant2": 0.3
+  },
+  "cause": "The participant1 expresses a sense of confusion and frustration regarding a system, while the participant2 remains silent and doesn't offer any clarification or engagement. There's a significant disconnect in their responses, suggesting a potential misunderstanding of the initial statement.",
+  "recommendation": "Encourage participant1 to elaborate on their confusion.  The participant2 should respond with a clarifying question or statement to establish a shared understanding of the system's purpose or functionality.",
+  "timestamp": 1743494659.4787493,
+  "transcript": "Hi. I don't know what to do with this system. I'm pretty..."
+}
